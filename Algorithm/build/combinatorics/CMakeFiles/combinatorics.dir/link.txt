@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libcombinatorics.a  CMakeFiles/combinatorics.dir/combinatorics.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libcombinatorics.a

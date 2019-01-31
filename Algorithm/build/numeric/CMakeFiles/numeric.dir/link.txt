@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libnumeric.a  CMakeFiles/numeric.dir/numeric.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libnumeric.a
