@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libdataStructure.a  CMakeFiles/dataStructure.dir/graph.cpp.o CMakeFiles/dataStructure.dir/hash.cpp.o CMakeFiles/dataStructure.dir/kdtree.cpp.o CMakeFiles/dataStructure.dir/nrkdtree.cpp.o CMakeFiles/dataStructure.dir/rshash.cpp.o CMakeFiles/dataStructure.dir/tree.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libdataStructure.a

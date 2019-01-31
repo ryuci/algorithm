@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libruntime.a  CMakeFiles/runtime.dir/binomial.cpp.o CMakeFiles/runtime.dir/dynamicProg.cpp.o CMakeFiles/runtime.dir/fence.cpp.o CMakeFiles/runtime.dir/maxsum.cpp.o CMakeFiles/runtime.dir/movingAverage.cpp.o CMakeFiles/runtime.dir/runtime.cpp.o CMakeFiles/runtime.dir/sa.cpp.o CMakeFiles/runtime.dir/saEasom.cpp.o CMakeFiles/runtime.dir/setcover.cpp.o CMakeFiles/runtime.dir/simplex.cpp.o CMakeFiles/runtime.dir/sorting.cpp.o CMakeFiles/runtime.dir/tsp.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libruntime.a

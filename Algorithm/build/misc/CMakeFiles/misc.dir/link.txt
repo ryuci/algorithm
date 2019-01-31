@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libmisc.a  CMakeFiles/misc.dir/misc.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libmisc.a
