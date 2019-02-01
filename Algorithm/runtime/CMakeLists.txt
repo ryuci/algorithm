@@ -1,9 +1,13 @@
 set(SRC_FILES 
-    binomial.cpp 
+    binomial.cpp
+    boardCover.cpp
+    boggle.cpp
+    cutRod.cpp
     dynamicProg.cpp 
     fence.cpp
     maxsum.cpp
     movingAverage.cpp
+    picnic.cpp
     runtime.cpp 
     sa.cpp
     saEasom.cpp

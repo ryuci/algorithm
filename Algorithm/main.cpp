@@ -35,10 +35,10 @@ static void showVtkMenu();
 #endif
 static void showMiscMenu();
 
-//#define AUTOMENU
+#define AUTOMENU
 #ifdef AUTOMENU
 // Key inputs to go to the wanted menu. Append -1 twice if you want to exit after execution.
-std::queue<int> autoInput = std::queue<int>({1, 6, -1, -1});
+std::queue<int> autoInput = std::queue<int>({1, 10, -1, -1});
 #else
 std::queue<int> autoInput;
 #endif
@@ -51,7 +51,7 @@ static std::vector< std::pair<std::string,void (*)()> > mainMenu = {
     {"Geometry", showGeometryMenu},
     {"Numeric", showNumericMenu},
     {"Matrix", showMatrixMenu},
-    {"Miscellaneous", showMiscMenu},
+    {"Misc.", showMiscMenu},
 #ifdef INCLUDE_OPENTV
     {"OpenCV", showOpencvMenu},
 #endif
@@ -105,6 +105,10 @@ static std::vector<std::pair<std::string,void (*)()>> runtimeMenu = {
     {"Sort - Radix Sort", testRadixSort},
     {"Moving Average", testMovingAverage},
     {"Max Sum", testMaxSum},
+    {"Cut Rod - Recursive vs DP", testCutRod},
+    {"Boggle - Recursive vs ??", testBoggle},
+    {"Picnic - Recursive vs ??", testPicnic},
+    {"Board Cover - Recursive vs ??", testBoardCover},
     {"Divide and Conquer - Fence", testFence},
     {"Linear Programming - Simplex", testLpSimplexByMosh},
     {"Dynamic Programming - Binomial", testBinomial},
@@ -169,6 +173,7 @@ static std::vector<std::pair<std::string,void (*)()>> miscMenu = {
     {"Random Shuffle Test", testRandomShuffle},
     {"Max Numbers", testMax},
     {"Combination", testCombination},
+    {"Recurring Decimal - Pigeonhole Priciple", testRecurringDecimal},
     {"Prime Factorization", testPrimeFactor},
     {"Prime Test - Eratosthenes's Sieve", testIsPrime},
     {"Board Cover", testBoardCover},

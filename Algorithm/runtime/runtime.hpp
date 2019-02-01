@@ -48,5 +48,10 @@ void testMaxSum();
 void print_tableau(Tableau *tab, const char* mes);
 void simplex(Tableau *tab);
 
+void testCutRod();
+
+void testBoggle();
+void testPicnic();
+void testBoardCover();
 
 #endif /* runtime_hpp */

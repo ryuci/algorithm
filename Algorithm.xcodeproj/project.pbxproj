@@ -31,6 +31,12 @@
 		C31130F92201A14B00F14DCA /* runtime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130DD2201A14B00F14DCA /* runtime.cpp */; };
 		C31130FA2201A14B00F14DCA /* tsp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130DF2201A14B00F14DCA /* tsp.cpp */; };
 		C31130FB2201A14B00F14DCA /* misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130E22201A14B00F14DCA /* misc.cpp */; };
+		C34C59342203DF6B007ACDAF /* cutRod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C59332203DF6B007ACDAF /* cutRod.cpp */; };
+		C34C593722040601007ACDAF /* recurringDecimal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C593522040601007ACDAF /* recurringDecimal.cpp */; };
+		C34C59392204150B007ACDAF /* boggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C59382204150B007ACDAF /* boggle.cpp */; };
+		C34C593B220420FA007ACDAF /* picnic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C593A220420FA007ACDAF /* picnic.cpp */; };
+		C34C593D2204210D007ACDAF /* boardCover.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C593C2204210D007ACDAF /* boardCover.cpp */; };
+		C34C593F22042275007ACDAF /* template.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C593E22042275007ACDAF /* template.cpp */; };
 		C3F7E1132201BFF4002DB645 /* saEasom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F7E1112201BFF4002DB645 /* saEasom.cpp */; };
 		C3F7E116220282AD002DB645 /* movingAverage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F7E114220282AD002DB645 /* movingAverage.cpp */; };
 		C3F7E11A2202A3D9002DB645 /* combinatorics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F7E1182202A3D9002DB645 /* combinatorics.cpp */; };
@@ -102,6 +108,12 @@
 		C31130E12201A14B00F14DCA /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		C31130E22201A14B00F14DCA /* misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = misc.cpp; sourceTree = "<group>"; };
 		C31130E32201A14B00F14DCA /* misc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = misc.hpp; sourceTree = "<group>"; };
+		C34C59332203DF6B007ACDAF /* cutRod.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cutRod.cpp; sourceTree = "<group>"; };
+		C34C593522040601007ACDAF /* recurringDecimal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = recurringDecimal.cpp; sourceTree = "<group>"; };
+		C34C59382204150B007ACDAF /* boggle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = boggle.cpp; sourceTree = "<group>"; };
+		C34C593A220420FA007ACDAF /* picnic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = picnic.cpp; sourceTree = "<group>"; };
+		C34C593C2204210D007ACDAF /* boardCover.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = boardCover.cpp; sourceTree = "<group>"; };
+		C34C593E22042275007ACDAF /* template.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = template.cpp; sourceTree = "<group>"; };
 		C3F7E1112201BFF4002DB645 /* saEasom.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = saEasom.cpp; sourceTree = "<group>"; };
 		C3F7E114220282AD002DB645 /* movingAverage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = movingAverage.cpp; sourceTree = "<group>"; };
 		C3F7E1182202A3D9002DB645 /* combinatorics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = combinatorics.cpp; sourceTree = "<group>"; };
@@ -143,6 +155,7 @@
 			children = (
 				C31130B22201A14B00F14DCA /* helper.cpp */,
 				C31130A82201A14A00F14DCA /* main.cpp */,
+				C34C593E22042275007ACDAF /* template.cpp */,
 				C31130A12201A14A00F14DCA /* helper.hpp */,
 				C31130A92201A14A00F14DCA /* main.hpp */,
 				C3F7E11C2202A43F002DB645 /* CMakeLists.txt */,
@@ -236,11 +249,15 @@
 			isa = PBXGroup;
 			children = (
 				C31130CC2201A14B00F14DCA /* binomial.cpp */,
+				C34C593C2204210D007ACDAF /* boardCover.cpp */,
+				C34C59382204150B007ACDAF /* boggle.cpp */,
 				C31130D02201A14B00F14DCA /* CMakeLists.txt */,
+				C34C59332203DF6B007ACDAF /* cutRod.cpp */,
 				C31130D52201A14B00F14DCA /* dynamicProg.cpp */,
 				C31130DC2201A14B00F14DCA /* fence.cpp */,
 				C3F7E11D22032129002DB645 /* maxsum.cpp */,
 				C3F7E114220282AD002DB645 /* movingAverage.cpp */,
+				C34C593A220420FA007ACDAF /* picnic.cpp */,
 				C31130DD2201A14B00F14DCA /* runtime.cpp */,
 				C31130CE2201A14B00F14DCA /* runtime.hpp */,
 				C31130D82201A14B00F14DCA /* sa.cpp */,
@@ -261,6 +278,7 @@
 				C31130E12201A14B00F14DCA /* CMakeLists.txt */,
 				C31130E22201A14B00F14DCA /* misc.cpp */,
 				C31130E32201A14B00F14DCA /* misc.hpp */,
+				C34C593522040601007ACDAF /* recurringDecimal.cpp */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -334,21 +352,26 @@
 				C31130F02201A14B00F14DCA /* numeric.cpp in Sources */,
 				C31130E82201A14B00F14DCA /* memory.cpp in Sources */,
 				C31130F42201A14B00F14DCA /* setcover.cpp in Sources */,
+				C34C593F22042275007ACDAF /* template.cpp in Sources */,
 				C31130F22201A14B00F14DCA /* binomial.cpp in Sources */,
 				C3F7E11A2202A3D9002DB645 /* combinatorics.cpp in Sources */,
 				C31130E72201A14B00F14DCA /* matrix.cpp in Sources */,
 				C31130FB2201A14B00F14DCA /* misc.cpp in Sources */,
 				C31130EC2201A14B00F14DCA /* rshash.cpp in Sources */,
 				C31130F92201A14B00F14DCA /* runtime.cpp in Sources */,
+				C34C593722040601007ACDAF /* recurringDecimal.cpp in Sources */,
 				C31130F82201A14B00F14DCA /* fence.cpp in Sources */,
 				C3F7E11E22032129002DB645 /* maxsum.cpp in Sources */,
+				C34C593D2204210D007ACDAF /* boardCover.cpp in Sources */,
 				C31130ED2201A14B00F14DCA /* tree.cpp in Sources */,
 				C31130F52201A14B00F14DCA /* dynamicProg.cpp in Sources */,
 				C3F7E116220282AD002DB645 /* movingAverage.cpp in Sources */,
 				C31130F62201A14B00F14DCA /* sorting.cpp in Sources */,
 				C31130EE2201A14B00F14DCA /* hash.cpp in Sources */,
+				C34C593B220420FA007ACDAF /* picnic.cpp in Sources */,
 				C31130FA2201A14B00F14DCA /* tsp.cpp in Sources */,
 				C31130E42201A14B00F14DCA /* geometry_helper.cpp in Sources */,
+				C34C59342203DF6B007ACDAF /* cutRod.cpp in Sources */,
 				C31130EF2201A14B00F14DCA /* kdtree.cpp in Sources */,
 				C31130EA2201A14B00F14DCA /* nrkdtree.cpp in Sources */,
 				C31130EB2201A14B00F14DCA /* graph.cpp in Sources */,
@@ -357,6 +380,7 @@
 				C31130F12201A14B00F14DCA /* simplex2.cpp in Sources */,
 				C31130E62201A14B00F14DCA /* main.cpp in Sources */,
 				C31130F32201A14B00F14DCA /* simplex.cpp in Sources */,
+				C34C59392204150B007ACDAF /* boggle.cpp in Sources */,
 				C31130E92201A14B00F14DCA /* helper.cpp in Sources */,
 				C3F7E1132201BFF4002DB645 /* saEasom.cpp in Sources */,
 			);

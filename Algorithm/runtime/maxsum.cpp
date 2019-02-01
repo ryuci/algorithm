@@ -94,6 +94,10 @@ ReturnType maxSum4(const std::vector<int>& a)
 }
 
 
+//
+// TEST CASES
+//
+
 // Result on iMac 3.5 GHz Intel Core i5, 8 GB 1600 MHz DDR3 XCode Debug Run
 //              maxSum1     maxSum2     maxSum3     maxSum4
 // N=8:         0.003ms     0.002ms     0.001ms     0ms

@@ -28,8 +28,8 @@ void testRandomShuffle();
 void testCombination();
 void testPrimeFactor();
 void testIsPrime();
-void testBoardCover();
 
 void testMax();
+void testRecurringDecimal();
 
 #endif /* misc_hpp */

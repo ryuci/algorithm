@@ -86,6 +86,7 @@ private:
     
     int selectCover(int index) {
         if (index == _coverSize) {
+            // Searched all indexes. Store the pick if it's one of the answers.
             if (isCovered()) return (int)_pick.size();
             else return INF;
         }
@@ -116,7 +117,6 @@ public:
             std::cout << "Cover not found!\n";
         return _pickList;
     }
-    
 };
 
 
