@@ -7,7 +7,6 @@
 //
 
 #include "helper.hpp"
-#include "geometry_helper.hpp"
 #include "geometry.hpp"
 #include <iostream>
 #include <memory>

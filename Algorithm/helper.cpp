@@ -8,6 +8,7 @@
 
 #define helper_cpp
 #include "main.hpp"
+#include "helper.hpp"
 #include <ctime>
 #include <vector>
 #if __cplusplus > 201402L // 199711L, 201703L
@@ -15,12 +16,15 @@
 #else
 #include <unistd.h>
 #endif
+
 #include <sstream>
 #include <fstream>
 #include <queue>
 #include <cstdio>
 
-
+//
+// TIMER
+//
 
 static clock_t c0;
 
@@ -36,6 +40,22 @@ void stopTimer() {
 double stopTimerRet() {
     return (double)(clock() - c0)/CLOCKS_PER_SEC*1000;
 }
+
+//
+// PRINT STL CONTAINERS
+//
+
+std::ostream& operator<<(std::ostream& os, const Point<int>& pt) {
+    return os << "(" << pt.x << "," << pt.y << ")";
+}
+
+std::ostream& operator<<(std::ostream& os, const std::vector<Point<int>>& v) {
+    for (int i = 0; i < v.size(); i++)
+        os << v[i];
+    return os;
+}
+
+
 
 #if 0
 template <typename T>
@@ -63,6 +83,10 @@ void print(std::vector<std::vector<T>> const &v)
 }
 #endif
 
+//
+// EXPORT STL CONTAINERS
+//
+
 int writeCSV(std::string fname, std::vector<Point<int>>& data) {
     std::ofstream file(fname.data());
     if (file.is_open()) {
@@ -83,6 +107,11 @@ int writeCSV(std::string fname, std::vector<Point<int>>& data) {
     }
     return 0;
 }
+
+//
+// MENU CONSTRUCTION
+//
+
 void NA() {
     std::cout << "--------------------" << std::endl;
     std::cout << "Not implemented yet" << std::endl;

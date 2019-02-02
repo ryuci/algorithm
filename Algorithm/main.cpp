@@ -38,7 +38,7 @@ static void showMiscMenu();
 //#define AUTOMENU
 #ifdef AUTOMENU
 // Key inputs to go to the wanted menu. Append -1 twice if you want to exit after execution.
-std::queue<int> autoInput = std::queue<int>({1, 10, -1, -1});
+std::queue<int> autoInput = std::queue<int>({4, 1, -1, -1});
 #else
 std::queue<int> autoInput;
 #endif
@@ -109,6 +109,8 @@ static std::vector<std::pair<std::string,void (*)()>> runtimeMenu = {
     {"Boggle - Recursive vs ??", testBoggle},
     {"Picnic - Recursive vs ??", testPicnic},
     {"Board Cover - Recursive vs ??", testBoardCover},
+    {"Sum - Recursive vs D&C", testSum},
+    {"Multiply - D&C", testMultiply},
     {"Divide and Conquer - Fence", testFence},
     {"Linear Programming - Simplex", testLpSimplexByMosh},
     {"Dynamic Programming - Binomial", testBinomial},
@@ -125,7 +127,7 @@ static std::vector<std::pair<std::string,void (*)()>> runtimeMenu = {
 
 static std::vector<std::pair<std::string,void (*)()>> memoryMenu = {
     {"Eratosthenes - Prime Number", NA/*testEratosthenes*/},
-    {"Reverse Quad Tree", testReverseQuadTree},
+    {"Quad Tree Reverse", testQuadTreeReverse},
 };
 
 static std::vector<std::pair<std::string,void (*)()>> combinatoricsMenu = {
@@ -137,6 +139,7 @@ static std::vector<std::pair<std::string,void (*)()>> combinatoricsMenu = {
 
 static std::vector<std::pair<std::string,void (*)()>> geometryMenu = {
     {"Rectangle Overlap", testRectOverlap},
+    {"Quad Tree Neighbor Search", testQuadTreeNeighborSearch},
 };
 
 static std::vector<std::pair<std::string,void (*)()>> numericMenu = {
@@ -233,9 +236,10 @@ int main(int argc, const char * argv[]) {
     std::cout << "long overflow = " << std::numeric_limits<long>::max() + 1 << std::endl;
     std::cout << "double max & significant digits = " << std::numeric_limits<double>::max() << std::endl;
     std::cout << "double max * 10 = " << std::numeric_limits<double>::max() * 10 << std::endl;
+#define INCLUDE_BOOST
 #ifdef INCLUDE_BOOST
     // Boost test
-    assert(boost::math::gcd(96, 484) == 4);
+    testBoost();
     std::cout << "Boost tested.\n";
 #endif
     

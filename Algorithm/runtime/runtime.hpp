@@ -42,7 +42,7 @@ void testDynamicProg();
 void testMovingAverage();
 
 void testMaxSum();
-
+void testMultiply();
 
 
 void print_tableau(Tableau *tab, const char* mes);
@@ -53,5 +53,10 @@ void testCutRod();
 void testBoggle();
 void testPicnic();
 void testBoardCover();
+
+void testSum();
+void testMultiply();
+void testBoost();
+
 
 #endif /* runtime_hpp */

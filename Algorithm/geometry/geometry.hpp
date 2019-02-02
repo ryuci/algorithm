@@ -11,4 +11,7 @@
 
 void testRectOverlap();
 
+namespace geometry {
+    class QuadTree;
+}
 #endif /* geometry_hpp */

@@ -41,8 +41,9 @@ else(OPENCV_FOUND)
 endif(OPENCV_FOUND)
 
 # Tell cmake that we need Boost.
-#find_package(Boost REQUIRED)
-set (BOOST_ROOT ~/boost_1_69_0)
+set (BOOST_ROOT /Users/ryuci/Dropbox/workspace/cpp/boost_1_69_0)
+find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIR})
 
 # The compiler uses to search for include files
 # in path to the source directory currently being processed. 
@@ -52,8 +53,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories("/usr/local/include")
 include_directories("/usr/local/Cellar/opencv/4.0.1/include/opencv4")
 include_directories("/usr/local/include/vtk-8.2")
-#include_directories(${Boost_INCLUDE_DIR})
-include_directories(${BOOST_ROOT})
+#include_directories("/Users/ryuci/Dropbox/workspace/cpp/boost_1_69_0")
 
 # Include the directory in your project. 
 # This directory must contain a CMakeLists.txt file.
@@ -86,6 +86,6 @@ target_link_libraries(algorithm
 #    vtk
     ${VTK_LIBRARIES}
 #    ${OpenCV_LIBS}
-    ${BOOST_LIBS}
+    ${Boost_LIBRARIES}
 )
 

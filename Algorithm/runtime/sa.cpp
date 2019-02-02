@@ -109,7 +109,7 @@ public:
         // Swqp two cities and get new distance.
         std::mt19937 rng;
         rng.seed(std::random_device()());
-        std::uniform_int_distribution<std::mt19937::result_type> dist(0, _altCities.size() - 1);
+        std::uniform_int_distribution<std::mt19937::result_type> dist(0, (int)_altCities.size() - 1);
         int index1 = dist(rng);
         int index2 = dist(rng);
         std::swap(_altCities[index1], _altCities[index2]);
