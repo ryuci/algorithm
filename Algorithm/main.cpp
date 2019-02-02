@@ -24,6 +24,7 @@ static void showDataStructMenu();
 static void showRuntimeMenu();
 static void showMemoryMenu();
 static void showCombinatoricsMenu();
+static void showDynamicProgMenu();
 static void showGeometryMenu();
 static void showNumericMenu();
 static void showMatrixMenu();
@@ -38,7 +39,7 @@ static void showMiscMenu();
 //#define AUTOMENU
 #ifdef AUTOMENU
 // Key inputs to go to the wanted menu. Append -1 twice if you want to exit after execution.
-std::queue<int> autoInput = std::queue<int>({4, 1, -1, -1});
+std::queue<int> autoInput = std::queue<int>({4, 3, -1, -1});
 #else
 std::queue<int> autoInput;
 #endif
@@ -48,6 +49,7 @@ static std::vector< std::pair<std::string,void (*)()> > mainMenu = {
     {"Runtime", showRuntimeMenu},
     {"Memory", showMemoryMenu},
     {"Combinatorics", showCombinatoricsMenu},
+    {"Dynamic Programming", showDynamicProgMenu},
     {"Geometry", showGeometryMenu},
     {"Numeric", showNumericMenu},
     {"Matrix", showMatrixMenu},
@@ -137,6 +139,16 @@ static std::vector<std::pair<std::string,void (*)()>> combinatoricsMenu = {
     {"Set Cover - Brute Force", testSetCover2},
 };
 
+static std::vector<std::pair<std::string,void (*)()>> dynamicProgMenu = {
+    {"Jump Game", testJumpGame},
+    {"Triangle Path", testTrianglePath},
+    {"Triangle Path Count", testTrianglePathCount},
+    {"Longest Increasing Subsequence(LIS)", testLIS},
+    {"Tiling", testTiling},
+
+    
+};
+
 static std::vector<std::pair<std::string,void (*)()>> geometryMenu = {
     {"Rectangle Overlap", testRectOverlap},
     {"Quad Tree Neighbor Search", testQuadTreeNeighborSearch},
@@ -196,6 +208,10 @@ static void showMemoryMenu() {
 
 static void showCombinatoricsMenu() {
     displayMenu(combinatoricsMenu, "Combinatorics");
+}
+
+static void showDynamicProgMenu() {
+    displayMenu(dynamicProgMenu, "Dynamic Programming");
 }
 
 static void showGeometryMenu() {

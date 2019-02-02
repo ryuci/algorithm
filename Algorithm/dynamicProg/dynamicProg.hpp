@@ -9,6 +9,10 @@
 #ifndef dynamicProg_hpp
 #define dynamicProg_hpp
 
-#include <stdio.h>
+void testJumpGame();
+void testTrianglePath();
+void testLIS();
+void testTiling();
+void testTrianglePathCount();
 
 #endif /* dynamicProg_hpp */
