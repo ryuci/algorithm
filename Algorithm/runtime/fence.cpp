@@ -11,7 +11,9 @@
 #include <vector>
 
 // Get maximum width of square. The width of each lumber in h is 1.
-static int fenceBruteForce(const std::vector<int>& h, bool logOn) {
+// O(n^2)
+//
+static int fenceBF(const std::vector<int>& h, bool logOn) {
     int ret = 0;
     int N = (int)h.size();
     for (int left = 0; left < N; ++left) {
@@ -29,14 +31,19 @@ static int fenceBruteForce(const std::vector<int>& h, bool logOn) {
     return ret;
 }
 
-static int fenceDivideNConquer(const std::vector<int>& h, int left, int right) {
+// Fence using divide and conquer.
+// Solve T(n) by 2T(n/2) + O(n), where O(n) is time to solve
+// the problem in overlapped area. T(n) is same to merge sort,
+// so O(nlogn).
+//
+static int fenceDC(const std::vector<int>& h, int left, int right) {
     int ret = 0;
     // Base case. Only 1 lumber left.
     if (left == right) return h[left];
     // Divide
     int mid = (left + right) / 2;
     // Conquer
-    ret = std::max(fenceDivideNConquer(h, left, mid), fenceDivideNConquer(h, mid + 1, right));
+    ret = std::max(fenceDC(h, left, mid), fenceDC(h, mid + 1, right));
     // Calculate from the middle just in case max square may overlap both sides.
     // Will find max between current area in ret and that of square in the middle.
     int lo = mid, hi = mid + 1;
@@ -74,25 +81,25 @@ static std::vector<int> testCase4;
 void testFence() {
     int ret;
     // Brute Force
-    startTimer(); ret = fenceBruteForce(testCase1, false); stopTimer(); assert(ret == 20);
+    startTimer(); ret = fenceBF(testCase1, false); stopTimer(); assert(ret == 20);
     std::cout << "Test Case 1 Result: " << ret << std::endl;
-    startTimer(); ret = fenceBruteForce(testCase2, false); stopTimer(); assert(ret == 16);
+    startTimer(); ret = fenceBF(testCase2, false); stopTimer(); assert(ret == 16);
     std::cout << "Test Case 2 Result: " << ret << std::endl;
-    startTimer(); ret = fenceBruteForce(testCase3, false); stopTimer(); assert(ret == 8);
+    startTimer(); ret = fenceBF(testCase3, false); stopTimer(); assert(ret == 8);
     std::cout << "Test Case 3 Result: " << ret << std::endl;
     // Make it tough!
     for (int i = 0; i < 20000; i++)
         testCase4.push_back(rand() % 9999 + 1);
-    startTimer(); ret = fenceBruteForce(testCase4, false); stopTimer();
+    startTimer(); ret = fenceBF(testCase4, false); stopTimer();
     std::cout << "Test Case 4 Result: " << ret << std::endl;
 
     // Divide & Conquer
-    startTimer(); ret = fenceDivideNConquer(testCase1, 0, (int)testCase1.size() - 1); stopTimer(); assert(ret == 20);
+    startTimer(); ret = fenceDC(testCase1, 0, (int)testCase1.size() - 1); stopTimer(); assert(ret == 20);
     std::cout << "Test Case 1 Result: " << ret << std::endl;
-    startTimer(); ret = fenceDivideNConquer(testCase2, 0, (int)testCase2.size() - 1); stopTimer(); assert(ret == 16);
+    startTimer(); ret = fenceDC(testCase2, 0, (int)testCase2.size() - 1); stopTimer(); assert(ret == 16);
     std::cout << "Test Case 2 Result: " << ret << std::endl;
-    startTimer(); ret = fenceDivideNConquer(testCase3, 0, (int)testCase3.size() - 1); stopTimer(); assert(ret == 8);
+    startTimer(); ret = fenceDC(testCase3, 0, (int)testCase3.size() - 1); stopTimer(); assert(ret == 8);
     std::cout << "Test Case 3 Result: " << ret << std::endl;
-    startTimer(); ret = fenceDivideNConquer(testCase4, 0, (int)testCase4.size() - 1); stopTimer();
+    startTimer(); ret = fenceDC(testCase4, 0, (int)testCase4.size() - 1); stopTimer();
     std::cout << "Test Case 4 Result: " << ret << std::endl;
 }

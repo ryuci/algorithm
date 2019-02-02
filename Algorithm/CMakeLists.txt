@@ -53,12 +53,13 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories("/usr/local/include")
 include_directories("/usr/local/Cellar/opencv/4.0.1/include/opencv4")
 include_directories("/usr/local/include/vtk-8.2")
-#include_directories("/Users/ryuci/Dropbox/workspace/cpp/boost_1_69_0")
+include_directories(".")
 
 # Include the directory in your project. 
 # This directory must contain a CMakeLists.txt file.
 add_subdirectory(combinatorics)
 add_subdirectory(dataStructure)
+add_subdirectory(dynamicProg)
 add_subdirectory(geometry)
 add_subdirectory(matrix)
 add_subdirectory(memory)
@@ -72,10 +73,12 @@ add_subdirectory(runtime)
 message(STATUS "Let's go!")
 
 add_executable(algorithm ${SRC_FILES})
+
 # Specify that target needs to be linked against one or more libraries.
 target_link_libraries(algorithm 
     combinatorics
     dataStructure
+    dynamicProg
     geometry 
     matrix 
     memory 

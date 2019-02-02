@@ -35,7 +35,7 @@ static void showVtkMenu();
 #endif
 static void showMiscMenu();
 
-#define AUTOMENU
+//#define AUTOMENU
 #ifdef AUTOMENU
 // Key inputs to go to the wanted menu. Append -1 twice if you want to exit after execution.
 std::queue<int> autoInput = std::queue<int>({4, 1, -1, -1});

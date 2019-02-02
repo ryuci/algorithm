@@ -4,7 +4,6 @@ set(SRC_FILES
     boggle.cpp
     clockSync.cpp
     cutRod.cpp
-    dynamicProg.cpp 
     fence.cpp
     maxsum.cpp
     movingAverage.cpp

@@ -12,11 +12,78 @@
 #include <boost/numeric/ublas/io.hpp>
 using namespace boost::numeric::ublas;
 
+// Big integer multiplication
+//
+VI multiply(const VI& a, const VI& b) {
+    VI c(a.size() + b.size() + 1, 0);
+    for (int i = 0 ; i < a.size(); ++i) {
+        for (int j = 0; j < b.size(); ++j) {
+            c[i+j] += a[i] * b[j];
+        }
+    }
+    // Process carries.
+    c.push_back(0);
+    for (int i = 0 ; i < c.size(); ++i) {
+        if (c[i] < 0) {
+            int borrow = (abs(c[i]) + 9) / 10;
+            c[i+1] -= borrow * 10;
+            c[i] += borrow * 10;
+        }
+        else {
+            c[i+1] += c[i] / 10;
+            c[i] %= 10;
+        }
+    }
+    while (c.size() > 1 && c.back() == 0) c.pop_back();
+    return c;
+}
+
 // Karatusba's big integer fast multiplication
 //
-VI karatusba(const VI& a, const VI& b) {
+static void add(VI& a, const VI& b, int k) {
+    for (int i = 0; i < b.size(); ++i) {
+        for (int i = 0; i < b.size(); ++i) {
+            a[i] += b[i]; //??????
+        }
+    }
+}
+
+static void sub(VI& a, const VI& b) {
+    
+}
+
+VI karatsuba(const VI& a, const VI& b) {
+    if (a.size() < b.size())
+        // Put longer number first.
+        return karatsuba(b, a);
+    if (a.size() == 0 || b.size() == 0)
+        return std::vector<int>();
+    // Karatsuba is efficient for big numbers.
+    if (a.size() <= 50) return multiply(a, b);
+    int half = a.size() / 2;
+    // Split the number.
+    VI a0(a.begin(), a.begin() + half);
+    VI a1(a.begin() + 1, a.end());
+    VI b0(b.begin(), b.begin() + std::min((int)b.size(), half));
+    VI b1(a.begin() + std::min((int)b.size(), half), b.end());
+    // z2 = a1 * b1
+    VI z2 = karatsuba(a1, b1);
+    // z0 = a0 * b0
+    VI z0 = karatsuba(a0, b0);
+    //  a0 = a0 + a1
+    add(a0, a1, 0);
+    //  b0 = b0 + b1
+    add(b0, b1, 0);
+    // z1 = (a0 * b0) - z0 -z3;
+    VI z1 = karatsuba(a0, b0);
+    sub(z1, z0);
+    sub(z1, z2);
+    // ret = z0 + z1 * 10^half + z2 * 10^(half*2)
     VI ret;
-    return ret;
+    add(ret, z0, 0);
+    add(ret, z1, half);
+    add(ret, z2, half + half);
+    return ret;    return ret;
 }
 
 // Matrix multiplication using recursion.

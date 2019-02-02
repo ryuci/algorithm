@@ -6,7 +6,11 @@
 //  Copyright © 2019 codetolearn.kr. All rights reserved.
 //
 
+// Unlike Xcode, CMake does not recursively search header files.
+// So, suffixing  relative path is required.
+//
 #include "helper.hpp"
+#include "dynamicProg/dynamicProg.hpp"
 #include "combinatorics/combinatorics.hpp"
 #include "dataStructure/dataStructure.hpp"
 #include "geometry/geometry.hpp"
