@@ -144,10 +144,14 @@ public:
                     std::cout << "bc (" << bc.x << "," << bc.y << ")\n";
                 }
                 
-                _nw = std::unique_ptr<QuadTree>(new QuadTree(_tl, cc, _capacity, _label + ":NW", _logOn));
-                _ne = std::unique_ptr<QuadTree>(new QuadTree(tc, rc, _capacity, _label + ":NE", _logOn));
-                _sw = std::unique_ptr<QuadTree>(new QuadTree(lc, bc, _capacity, _label + ":SW", _logOn));
-                _se = std::unique_ptr<QuadTree>(new QuadTree(cc, _br, _capacity, _label + ":SE", _logOn));
+                //_nw = std::unique_ptr<QuadTree>(new QuadTree(_tl, cc, _capacity, _label + ":NW", _logOn));
+                _nw = std::make_unique<QuadTree>(QuadTree(_tl, cc, _capacity, _label + ":NW", _logOn));
+                //_ne = std::unique_ptr<QuadTree>(new QuadTree(tc, rc, _capacity, _label + ":NE", _logOn));
+                _ne = std::make_unique<QuadTree>(QuadTree(tc, rc, _capacity, _label + ":NE", _logOn));
+                //_sw = std::unique_ptr<QuadTree>(new QuadTree(lc, bc, _capacity, _label + ":SW", _logOn));
+                _sw = std::make_unique<QuadTree>(QuadTree(lc, bc, _capacity, _label + ":SW", _logOn));
+                //_se = std::unique_ptr<QuadTree>(new QuadTree(cc, _br, _capacity, _label + ":SE", _logOn));
+                _se = std::make_unique<QuadTree>(QuadTree(cc, _br, _capacity, _label + ":SE", _logOn));
                 assert(_nw != nullptr);
                 assert(_ne != nullptr);
                 assert(_sw != nullptr);

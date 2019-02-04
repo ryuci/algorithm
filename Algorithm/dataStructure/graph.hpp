@@ -17,16 +17,16 @@ private:
     //std::vector<std::vector<int>> _adj;
     std::vector<std::vector<std::pair<int, double>>> _adj;
     // Info stored in vertices. Size of vector = _size = # of vertices.
-    std::vector<bool> _visited;
+    VB _visited;
     // Another version of _visited. Record visit order.
-    std::vector<int> _discovered;
+    VI _discovered;
     // Tell if DFS completed.
-    std::vector<bool> _finished;
+    VB _finished;
     // Store sorting order.
-    std::vector<int> _order;
+    VI _order;
     // Store # of edges connected to the vertex. Used in Eulerian Circuit.
-    std::vector<int> _degree;
-    std::vector<std::string> _label;
+    VI _degree;
+    VS _label;
     // # of vertices
     int _size;
     // vertices count
@@ -38,11 +38,12 @@ public:
     void connect(int here, int there, double weight=0.0);
     void print(bool infoToo);
     void printOrder();
+    VD dijkstra(int here);
     void dfs(int here, std::function<void(int)> callback);
     void dfs2(int here, std::function<void(int)> callback);
     bool dfs3(int here, std::function<void(int)> callback);
     void dfs(std::function<void(int)> callback);
-    std::vector<int> sort();
+    VI sort();
     void sortCallback(int x);
     bool isSplit();
     bool isCyclic(int here);
@@ -55,5 +56,6 @@ void testGraphDfs();
 void testGraphDfsEdgeType();
 void testGraphDfsCyclic();
 void testGraphSort();
+void testGraphDijkstra();
 
 #endif /* graph_hpp */

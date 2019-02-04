@@ -8,8 +8,6 @@
 
 #include "helper.hpp"
 #include "graph.hpp"
-#include <string>
-#include <vector>
 
 // Constructor
 Graph::Graph(int size) : _size(size), _count(0) {
@@ -51,6 +49,37 @@ void Graph::print(bool infoToo=false) {
         }
         std::cout << std::endl;
     }
+}
+
+// Dijkstra Algorithm
+//
+VD Graph::dijkstra(int here) {
+    // Will Store <updated distance, there> info as a pair, shortest distance first .
+    std::priority_queue<std::pair<double, int>,
+                        std::vector<std::pair<double, int>>,
+                        std::greater<std::pair<double, int>>> pq;
+    // Make all distances infinity except here.
+    VD distance(_adj.size(), std::numeric_limits<double>::infinity());
+    distance[here] = 0.;
+    pq.push({0., here});
+    while (!pq.empty()) {
+        int cost = pq.top().first;
+        int here = pq.top().second;
+        pq.pop();
+        // Ignore the distance from queue if we already know shorter distance.
+        if (distance[here] < cost) continue;
+        // Browse connecting vertices to update distance and put in the queue.
+        for (int i = 0; i < _adj[here].size(); ++i) {
+            int there = _adj[here][i].first;
+            int tmp = cost + _adj[here][i].second;
+            if (distance[there] > tmp) {
+                distance[there] = tmp;
+                pq.push({tmp, there});
+            }
+        }
+    }
+    return distance;
+    
 }
 
 // Depth First Search
@@ -234,7 +263,7 @@ bool Graph::isSplit() {
             return true;
     }
     return false;
-};
+}
 
 // Test if it's cyclic graph.
 bool Graph::isCyclic(int here) {
@@ -254,11 +283,11 @@ bool Graph::exist(int from, int to) {
 
     
 
-Graph* testGraphPrepare() {
+static std::unique_ptr<Graph> prepareGraph() {
     // Make a dependency graph, which is a Directed Acyclic Graph.
     // In this example, we have 10 vertices and 11 edges.
     // Graph g(V) = V vertices
-    Graph* g = new Graph(10);
+    std::unique_ptr<Graph> g = std::make_unique<Graph>(Graph(10));
     // E connect() calls = E edges. e.g. 11 calls = 11 edges.
     g->connect(5,6); g->connect(5,7); g->connect(5,8); g->connect(6,0); g->connect(7,1);
     g->connect(8,3); g->connect(0,1); g->connect(9,2); g->connect(1,2); g->connect(2,3);
@@ -267,11 +296,11 @@ Graph* testGraphPrepare() {
     return g;
 }
 
-Graph* testGraphPrepareCyclic() {
+static std::unique_ptr<Graph> prepareCyclicGraph() {
     // Make a Directed Cyclic Graph.
     // In this example, we have 7 vertices and 10 edges.
     // Graph g(V) = V vertices
-    Graph* g = new Graph(7);
+    std::unique_ptr<Graph> g = std::make_unique<Graph>(Graph(7));
     // E connect() calls = E edges. e.g. 11 calls = 11 edges.
     g->connect(0,1); g->connect(0,4); g->connect(0,5); g->connect(0,6); g->connect(5,3);
     g->connect(5,6); g->connect(6,3); g->connect(1,2); g->connect(4,2); g->connect(2,0);
@@ -279,59 +308,71 @@ Graph* testGraphPrepareCyclic() {
     return g;
 }
 
+static std::unique_ptr<Graph> prepareWeightedGraph() {
+    // Make a Directed Weighted Acyclic Graph.
+    // In this example, we have 8 vertices and 13 edges.
+    // Graph g(V) = V vertices
+    std::unique_ptr<Graph> g = std::make_unique<Graph>(Graph(8));
+    // E connect() calls = E edges. e.g. 11 calls = 11 edges.
+    g->connect(0,1,11); g->connect(0,2,9); g->connect(0,3,8);
+    g->connect(1,4,8); g->connect(1,5,8);
+    g->connect(2,3,6); g->connect(2,6,1);
+    g->connect(3,6,10);
+    g->connect(4,5,7);
+    g->connect(5,2,12); g->connect(5,7,5);
+    g->connect(6,7,2);
+    g->connect(7,4,4);
+    return g;
+}
+    
+
 void testGraphConnect() {
-    Graph* g = testGraphPrepare();
-    delete g;
+    std::unique_ptr<Graph> g = prepareGraph();
 }
 
 void testGraphSearch() {
-    Graph* g = testGraphPrepare();
-    delete g;
+    std::unique_ptr<Graph> g = prepareGraph();
 }
 
 void testGraphSort() {
-    Graph* g = testGraphPrepare();
+    std::unique_ptr<Graph> g = prepareGraph();
     std::vector<int> order = g->sort();
     std::cout << "Sort Result: " << std::endl;
     g->printOrder();
-    delete g;
 }
 
 void testGraphDfs() {
-    Graph* g = testGraphPrepare();
+    std::unique_ptr<Graph> g = prepareGraph();
     std::cout << "DFS from vertex 7" << std::endl;
     g->dfs(7);
     g->print(true);
-    delete g;
 }
 
 void testGraphDfsEdgeType() {
-    Graph* g = testGraphPrepareCyclic();
+    std::unique_ptr<Graph> g = prepareCyclicGraph();
     std::cout << "DFS from vertex 0" << std::endl;
     g->dfs2(0);
-    delete g;
 }
     
 void testGraphDfsCyclic() {
-    Graph* g = testGraphPrepareCyclic();
+    std::unique_ptr<Graph> g = prepareCyclicGraph();
     std::cout << "DFS from vertex 0" << std::endl;
     if (g->dfs3(0))
         std::cout << "Cyclic!!!" << std::endl;
     else
         std::cout << "Acyclic!!!" << std::endl;
 
-    g = testGraphPrepare();
+    g = prepareGraph();
     std::cout << "DFS from vertex 0" << std::endl;
     if (g->dfs3(0))
         std::cout << "Cyclic!!!" << std::endl;
     else
         std::cout << "Acyclic!!!" << std::endl;
-    delete g;
 }
 
 void testGraphSplit() {
     // Should test using undirection graph??? My brain is tired now, let me think tomorrow.
-    Graph* g = testGraphPrepare();
+    std::unique_ptr<Graph> g = prepareGraph();
     std::cout << "DFS from vertex 5" << std::endl;
     g->dfs(5);
     g->print(true);
@@ -340,5 +381,13 @@ void testGraphSplit() {
     std::cout << "DFS from all vertexes" << std::endl;
     g->dfs();
     g->print(true);
-    delete g;
+}
+
+void testGraphDijkstra() {
+    std::unique_ptr<Graph> g = prepareWeightedGraph();
+    VD distance = g->dijkstra(0);
+    std::cout << "Distance from 0 to each vertec:" << std::endl;
+    for (int i = 0; i < distance.size(); ++i) {
+        std::cout << i << ": " << distance[i] << std::endl;
+    }
 }

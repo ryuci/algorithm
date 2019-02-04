@@ -14,6 +14,8 @@
 #include <vector>
 #include <deque>
 #include <algorithm>
+#include <string>
+#include <memory>
 #include <cmath>
 
 //
@@ -114,6 +116,7 @@ public:
 typedef std::vector<bool> VB;
 typedef std::vector<int> VI;
 typedef std::vector<double> VD;
+typedef std::vector<std::string> VS;
 typedef std::vector<std::vector<bool>> VVB;
 typedef std::vector<std::vector<int>> VVI;
 typedef std::vector<std::vector<double>> VVD;
