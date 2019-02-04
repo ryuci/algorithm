@@ -79,8 +79,43 @@ VD Graph::dijkstra(int here) {
         }
     }
     return distance;
-    
 }
+
+// Dijkstra2 Algorithm
+// When |V|<<|E|, it could be much faster without using priority queue.
+//
+VD Graph::dijkstra2(int here) {
+    // Make all distances infinity except here.
+    VD distance(_adj.size(), std::numeric_limits<double>::infinity());
+    
+    // TODO:
+    
+    return distance;
+}
+
+VD Graph::bellmanFord(int here) {
+    // Make all distances infinity except here.
+    VD upper(_adj.size(), std::numeric_limits<double>::infinity());
+    upper[here] = 0.;
+    bool updated;
+    for (int i = 0; i < _adj.size(); ++i) {
+        updated = false;
+        for (int here = 0; here < _adj.size(); ++here) {
+            for (int j = 0; j < _adj[here].size(); ++j) {
+                int there = _adj[here][j].first;
+                int cost = _adj[here][j].second;
+                if (upper[there] > upper[here] + cost) {
+                    upper[there] = upper[here] + cost;
+                    updated = true;
+                }
+            }
+        }
+        if (!updated) break;
+    }
+    if (updated) upper.clear();
+    return upper;
+}
+
 
 // Depth First Search
 // Visit recursively all vertices connected from here.
@@ -309,14 +344,12 @@ static std::unique_ptr<Graph> prepareCyclicGraph() {
 }
 
 static std::unique_ptr<Graph> prepareWeightedGraph() {
-    // Make a Directed Weighted Acyclic Graph.
-    // In this example, we have 8 vertices and 13 edges.
-    // Graph g(V) = V vertices
+    // Make a Directed Weighted Graph.
     std::unique_ptr<Graph> g = std::make_unique<Graph>(Graph(8));
     // E connect() calls = E edges. e.g. 11 calls = 11 edges.
     g->connect(0,1,11); g->connect(0,2,9); g->connect(0,3,8);
     g->connect(1,4,8); g->connect(1,5,8);
-    g->connect(2,3,6); g->connect(2,6,1);
+    g->connect(2,1,3); g->connect(2,3,6); g->connect(2,6,1);
     g->connect(3,6,10);
     g->connect(4,5,7);
     g->connect(5,2,12); g->connect(5,7,5);
@@ -324,7 +357,22 @@ static std::unique_ptr<Graph> prepareWeightedGraph() {
     g->connect(7,4,4);
     return g;
 }
-    
+
+static std::unique_ptr<Graph> prepareWeightedGraph2() {
+    // Make a Directed (positive & negative) Weighted Graph.
+    std::unique_ptr<Graph> g = std::make_unique<Graph>(Graph(8));
+    // E connect() calls = E edges. e.g. 11 calls = 11 edges.
+    g->connect(0,1,11); g->connect(0,2,9); g->connect(0,3,8);
+    g->connect(1,4,8); g->connect(1,5,8);
+    g->connect(2,1,3); g->connect(2,3,-15); g->connect(2,6,1);
+    g->connect(3,6,10);
+    g->connect(4,5,-7);
+    g->connect(5,2,12); g->connect(5,7,5);
+    g->connect(6,7,2);
+    g->connect(7,4,4);
+    return g;
+}
+
 
 void testGraphConnect() {
     std::unique_ptr<Graph> g = prepareGraph();
@@ -386,7 +434,16 @@ void testGraphSplit() {
 void testGraphDijkstra() {
     std::unique_ptr<Graph> g = prepareWeightedGraph();
     VD distance = g->dijkstra(0);
-    std::cout << "Distance from 0 to each vertec:" << std::endl;
+    std::cout << "Dijkstra - Distance from 0 to each vertex:" << std::endl;
+    for (int i = 0; i < distance.size(); ++i) {
+        std::cout << i << ": " << distance[i] << std::endl;
+    }
+}
+
+void testGraphBellmanFord() {
+    std::unique_ptr<Graph> g = prepareWeightedGraph2();
+    VD distance = g->bellmanFord(0);
+    std::cout << "BellmanFord - Distance from 0 to each vertex:" << std::endl;
     for (int i = 0; i < distance.size(); ++i) {
         std::cout << i << ": " << distance[i] << std::endl;
     }

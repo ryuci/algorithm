@@ -39,6 +39,8 @@ public:
     void print(bool infoToo);
     void printOrder();
     VD dijkstra(int here);
+    VD dijkstra2(int here);
+    VD bellmanFord(int here);
     void dfs(int here, std::function<void(int)> callback);
     void dfs2(int here, std::function<void(int)> callback);
     bool dfs3(int here, std::function<void(int)> callback);
@@ -57,5 +59,6 @@ void testGraphDfsEdgeType();
 void testGraphDfsCyclic();
 void testGraphSort();
 void testGraphDijkstra();
+void testGraphBellmanFord();
 
 #endif /* graph_hpp */

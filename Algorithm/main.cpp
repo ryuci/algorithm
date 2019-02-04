@@ -39,10 +39,10 @@ static void showVtkMenu();
 #endif
 static void showMiscMenu();
 
-#define AUTOMENU
+//#define AUTOMENU
 #ifdef AUTOMENU
 // Key inputs to go to the wanted menu. Append -1 twice if you want to exit after execution.
-std::queue<int> autoInput = std::queue<int>({0, 21, -1, -1});
+std::queue<int> autoInput = std::queue<int>({0, 22, -1, -1});
 #else
 std::queue<int> autoInput;
 #endif
@@ -91,6 +91,7 @@ static std::vector<std::pair<std::string,void (*)()>> dataStructMenu = {
     {"Graph - BFS", NA},
     {"Graph - Topological Sort", testGraphSort},
     {"Graph - Dijkstra", testGraphDijkstra},
+    {"Graph - BellmanFord", testGraphBellmanFord},
     {"Graph - Eulerian Circuit", NA/*testGraphEulerianCircuit*/},
     {"Graph - Eulerian Trail", NA/*testGraphEulerianTrail*/},
     {"Graph - Cut Vertex", NA/*testGraphCutVertex*/},
