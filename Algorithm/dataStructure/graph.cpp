@@ -13,7 +13,7 @@
 
 // Constructor
 Graph::Graph(int size) : _size(size), _count(0) {
-    _adj.assign(size, std::vector<int>());
+    _adj.assign(size, std::vector<std::pair<int, double>>());
     _visited.assign(size, false);
     _discovered.assign(size, -1);
     _finished.assign(size, false);
@@ -31,13 +31,8 @@ void Graph::clearLabel() {
 }
 
 // Add an edge
-void Graph::connect(int here, int there) {
-    _adj[here].push_back(there);
-}
-
-// Add an weighted edge
-void Graph::connect(int here, int there, int weight) {
-    _adj[here].push_back(there);
+void Graph::connect(int here, int there, double weight) {
+    _adj[here].push_back({there, weight});
 }
 
 // Print the graph
@@ -49,7 +44,7 @@ void Graph::print(bool infoToo=false) {
             std::cout << "(" << (_visited[i] ? "true": "false") << "," << _label[i] << ")";
         std::cout << ": ";
         for (int j = 0; j < _adj[i].size(); j++) {
-            std::cout << _adj[i][j];
+            std::cout << _adj[i][j].first;
             if (infoToo)
                 std::cout << "(" << (_visited[i] ? "true": "false") << "," << _label[i] << ")";
             if (j != _adj[i].size()-1) std::cout << ",";
@@ -73,7 +68,7 @@ void Graph::dfs(int here, std::function<void(int)> callback=nullptr) {
         
     // Iteratively visit adjacent vertex
     for (int i = 0; i < _adj[here].size(); i++) {
-        int there = _adj[here][i];
+        int there = _adj[here][i].first;
         if (!_visited[there])
             // Tree edge
             dfs(there, callback);
@@ -92,7 +87,7 @@ void Graph::dfs2(int here, std::function<void(int)> callback=nullptr) {
     
     // Iteratively visit adjacent vertex
     for (int i = 0; i < _adj[here].size(); i++) {
-        int there = _adj[here][i];
+        int there = _adj[here][i].first;
         std::cout << "(" << here << "," << there << ")" << "is a ";
         // -1: no visit, >=0: visit order
         if (_discovered[there] == -1) {
@@ -122,7 +117,7 @@ bool Graph::dfs3(int here, std::function<void(int)> callback=nullptr) {
     
     // Iteratively visit adjacent vertex
     for (int i = 0; i < _adj[here].size(); i++) {
-        int there = _adj[here][i];
+        int there = _adj[here][i].first;
         // -1: no visit, >=0: visit order
         if (_discovered[there] == -1) {
             // tree edge.
@@ -252,7 +247,7 @@ bool Graph::isCyclic(int here) {
 // Test if edge exists.
 bool Graph::exist(int from, int to) {
     for (int i = 0; i < _adj[from].size(); i++)
-        if (_adj[from][i] == to)
+        if (_adj[from][i].first == to)
             return true;
     return false;
 }

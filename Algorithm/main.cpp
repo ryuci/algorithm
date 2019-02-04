@@ -42,7 +42,7 @@ static void showMiscMenu();
 #define AUTOMENU
 #ifdef AUTOMENU
 // Key inputs to go to the wanted menu. Append -1 twice if you want to exit after execution.
-std::queue<int> autoInput = std::queue<int>({8, 1, -1, -1});
+std::queue<int> autoInput = std::queue<int>({0, 18, -1, -1});
 #else
 std::queue<int> autoInput;
 #endif
