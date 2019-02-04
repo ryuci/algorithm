@@ -2,6 +2,7 @@ set(SRC_FILES
     dynamicProg.cpp
     jumpGame.cpp
     longestIncreasingSubseq.cpp
+    snail.cpp
     tiling.cpp
     trianglePath.cpp
 )

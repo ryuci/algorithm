@@ -61,11 +61,13 @@ add_subdirectory(combinatorics)
 add_subdirectory(dataStructure)
 add_subdirectory(dynamicProg)
 add_subdirectory(geometry)
+add_subdirectory(greedyMethod)
 add_subdirectory(matrix)
 add_subdirectory(memory)
 add_subdirectory(misc)
-add_subdirectory(numeric)
+add_subdirectory(numericalAnalysis)
 #add_subdirectory(opencv)
+add_subdirectory(optByDecision)
 add_subdirectory(runtime)
 #add_subdirectory(vtk)
 
@@ -79,12 +81,14 @@ target_link_libraries(algorithm
     combinatorics
     dataStructure
     dynamicProg
-    geometry 
+    geometry
+    greedyMethod
     matrix 
     memory 
     misc 
     numeric 
 #    opencv
+    optByDecision
     runtime
 #    vtk
     ${VTK_LIBRARIES}

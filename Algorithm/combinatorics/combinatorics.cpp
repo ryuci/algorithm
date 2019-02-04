@@ -56,6 +56,17 @@ void nCr(int n, int r, std::vector<int>& pick, std::vector<std::vector<int>>& pi
     }
 }
 
+// nC4
+//
+void nC4(int n, std::vector<std::vector<int>>& pickList) {
+    for (int i = 0; i < n; i++)
+        for (int j = i + 1; j < n; j++)
+            for (int k = j + 1; k < n; k++)
+                for (int l = k + 1; l < n; l++)
+                    pickList.push_back(VI({i,j,k,l}));
+}
+
+
 class SetCover {
 private:
     std::vector<int> _pick;

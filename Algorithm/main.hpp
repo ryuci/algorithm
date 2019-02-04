@@ -14,10 +14,12 @@
 #include "combinatorics/combinatorics.hpp"
 #include "dataStructure/dataStructure.hpp"
 #include "geometry/geometry.hpp"
+#include "greedyMethod/greedyMethod.hpp"
 #include "matrix/matrix.hpp"
 #include "memory/memory.hpp"
 #include "misc/misc.hpp"
-#include "numeric/numeric.hpp"
+#include "numericalAnalysis/numeric.hpp"
+#include "optByDecision/optByDecision.hpp"
 #ifdef INCLUDE_OPENCV
 #include "opencv/opencvbridge.hpp"
 #endif

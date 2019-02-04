@@ -26,6 +26,8 @@ static void showMemoryMenu();
 static void showCombinatoricsMenu();
 static void showDynamicProgMenu();
 static void showGeometryMenu();
+static void showGreedyMethodMenu();
+static void showOptByDecisionMenu();
 static void showNumericMenu();
 static void showMatrixMenu();
 #ifdef INCLUDE_OPENTV
@@ -36,20 +38,22 @@ static void showVtkMenu();
 #endif
 static void showMiscMenu();
 
-//#define AUTOMENU
+#define AUTOMENU
 #ifdef AUTOMENU
 // Key inputs to go to the wanted menu. Append -1 twice if you want to exit after execution.
-std::queue<int> autoInput = std::queue<int>({4, 3, -1, -1});
+std::queue<int> autoInput = std::queue<int>({6, 0, -1, -1});
 #else
 std::queue<int> autoInput;
 #endif
 
-static std::vector< std::pair<std::string,void (*)()> > mainMenu = {
+static std::vector<std::pair<std::string,void (*)()>> mainMenu = {
     {"Data Structure", showDataStructMenu},
     {"Runtime", showRuntimeMenu},
     {"Memory", showMemoryMenu},
     {"Combinatorics", showCombinatoricsMenu},
     {"Dynamic Programming", showDynamicProgMenu},
+    {"Greedy Method", showGreedyMethodMenu},
+    {"Opt by Decision", showOptByDecisionMenu},
     {"Geometry", showGeometryMenu},
     {"Numeric", showNumericMenu},
     {"Matrix", showMatrixMenu},
@@ -121,7 +125,7 @@ static std::vector<std::pair<std::string,void (*)()>> runtimeMenu = {
     {"Dynamic Programming - Pebbles", NA},
     {"Dynamic Programming - Matrix Multiplication", NA},
     {"Dynamic Programming - Longest Common Sequence", NA},
-    {"TSP - BF vs. DP", testTSP },
+    {"TSP - BF vs. DP", testTSP }, // 11
     {"TSP - Simulated Annealing", testSaTSP },
     {"Set Cover - BF & ", testSetCover },
     {"A* - Best First Search", NA},
@@ -144,14 +148,32 @@ static std::vector<std::pair<std::string,void (*)()>> dynamicProgMenu = {
     {"Triangle Path", testTrianglePath},
     {"Triangle Path Count", testTrianglePathCount},
     {"Longest Increasing Subsequence(LIS)", testLIS},
+    {"Snail", testSnail},
+
     {"Tiling", testTiling},
 
     
 };
 
+static std::vector<std::pair<std::string,void (*)()>> optByDecisionMenu = {
+    {"DARPA", testDARPA},
+    {"Artic", testArctic},
+    {"CanadaTrip", testCanadaTrip},
+    {"Withdrawal", testWithdrawal},
+};
+
+
 static std::vector<std::pair<std::string,void (*)()>> geometryMenu = {
     {"Rectangle Overlap", testRectOverlap},
     {"Quad Tree Neighbor Search", testQuadTreeNeighborSearch},
+};
+
+static std::vector<std::pair<std::string,void (*)()>> greedyMethodMenu = {
+    {"MeetingRoom", testMeetingRoom},
+    {"Fight Order", testFightOrder},
+    {"Heating Order", testHeatingOrder},
+    {"Join String", testConcat},
+    {"Minas Tirith", testMinasTirith},
 };
 
 static std::vector<std::pair<std::string,void (*)()>> numericMenu = {
@@ -216,6 +238,16 @@ static void showDynamicProgMenu() {
 
 static void showGeometryMenu() {
     displayMenu(geometryMenu, "Geometry");
+}
+
+static void showGreedyMethodMenu() {
+    displayMenu(greedyMethodMenu, "Greedy Method");
+
+}
+
+static void showOptByDecisionMenu() {
+    displayMenu(optByDecisionMenu, "Opt by Decision");
+    
 }
 
 static void showNumericMenu() {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30A43EF2207C3C800550CBD /* fossil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C30A43EE2207C3C800550CBD /* fossil.cpp */; };
+		C30A43F12207CA1600550CBD /* simpsonMethod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C30A43F02207CA1600550CBD /* simpsonMethod.cpp */; };
 		C31130E52201A14B00F14DCA /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130A42201A14A00F14DCA /* geometry.cpp */; };
 		C31130E62201A14B00F14DCA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130A82201A14A00F14DCA /* main.cpp */; };
 		C31130E72201A14B00F14DCA /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130AD2201A14A00F14DCA /* matrix.cpp */; };
@@ -35,6 +37,18 @@
 		C31AB6CF2205B7E9008251FF /* trianglePath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6CE2205B7E9008251FF /* trianglePath.cpp */; };
 		C31AB6D12205C8CC008251FF /* longestIncreasingSubseq.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6D02205C8CC008251FF /* longestIncreasingSubseq.cpp */; };
 		C31AB6D52205D6BB008251FF /* tiling.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6D42205D6BB008251FF /* tiling.cpp */; };
+		C31AB6D72206807E008251FF /* snail.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6D62206807E008251FF /* snail.cpp */; };
+		C31AB6DB2206CA48008251FF /* meetingRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6DA2206CA48008251FF /* meetingRoom.cpp */; };
+		C31AB6DE2206CA55008251FF /* fightOrder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6DC2206CA55008251FF /* fightOrder.cpp */; };
+		C31AB6E12206CA7B008251FF /* greedyMethod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6DF2206CA7B008251FF /* greedyMethod.cpp */; };
+		C31AB6E32206E245008251FF /* heatingOrder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6E22206E245008251FF /* heatingOrder.cpp */; };
+		C31AB6E52206F476008251FF /* joinString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6E42206F476008251FF /* joinString.cpp */; };
+		C31AB6E72206F896008251FF /* minasTirith.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6E62206F896008251FF /* minasTirith.cpp */; };
+		C31AB6EB22070AE7008251FF /* optByDecision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6E922070AE7008251FF /* optByDecision.cpp */; };
+		C31AB6EE22070B21008251FF /* DARPA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6ED22070B21008251FF /* DARPA.cpp */; };
+		C31AB6F022070CFB008251FF /* arctic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6EF22070CFB008251FF /* arctic.cpp */; };
+		C31AB6F222070D44008251FF /* canadaTrip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6F122070D44008251FF /* canadaTrip.cpp */; };
+		C31AB6F422070D6D008251FF /* withdrawal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31AB6F322070D6D008251FF /* withdrawal.cpp */; };
 		C34C59342203DF6B007ACDAF /* cutRod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C59332203DF6B007ACDAF /* cutRod.cpp */; };
 		C34C593722040601007ACDAF /* recurringDecimal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C593522040601007ACDAF /* recurringDecimal.cpp */; };
 		C34C59392204150B007ACDAF /* boggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C59382204150B007ACDAF /* boggle.cpp */; };
@@ -66,6 +80,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C30A43EE2207C3C800550CBD /* fossil.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fossil.cpp; sourceTree = "<group>"; };
+		C30A43F02207CA1600550CBD /* simpsonMethod.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simpsonMethod.cpp; sourceTree = "<group>"; };
 		C31130972201A0FA00F14DCA /* Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31130A12201A14A00F14DCA /* helper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = helper.hpp; sourceTree = "<group>"; };
 		C31130A42201A14A00F14DCA /* geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
@@ -123,6 +139,22 @@
 		C31AB6CE2205B7E9008251FF /* trianglePath.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = trianglePath.cpp; sourceTree = "<group>"; };
 		C31AB6D02205C8CC008251FF /* longestIncreasingSubseq.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = longestIncreasingSubseq.cpp; sourceTree = "<group>"; };
 		C31AB6D42205D6BB008251FF /* tiling.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tiling.cpp; sourceTree = "<group>"; };
+		C31AB6D62206807E008251FF /* snail.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = snail.cpp; sourceTree = "<group>"; };
+		C31AB6D92206C9EE008251FF /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		C31AB6DA2206CA48008251FF /* meetingRoom.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = meetingRoom.cpp; sourceTree = "<group>"; };
+		C31AB6DC2206CA55008251FF /* fightOrder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fightOrder.cpp; sourceTree = "<group>"; };
+		C31AB6DF2206CA7B008251FF /* greedyMethod.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = greedyMethod.cpp; sourceTree = "<group>"; };
+		C31AB6E02206CA7B008251FF /* greedyMethod.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = greedyMethod.hpp; sourceTree = "<group>"; };
+		C31AB6E22206E245008251FF /* heatingOrder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heatingOrder.cpp; sourceTree = "<group>"; };
+		C31AB6E42206F476008251FF /* joinString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = joinString.cpp; sourceTree = "<group>"; };
+		C31AB6E62206F896008251FF /* minasTirith.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = minasTirith.cpp; sourceTree = "<group>"; };
+		C31AB6E922070AE7008251FF /* optByDecision.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = optByDecision.cpp; sourceTree = "<group>"; };
+		C31AB6EA22070AE7008251FF /* optByDecision.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = optByDecision.hpp; sourceTree = "<group>"; };
+		C31AB6EC22070AEE008251FF /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		C31AB6ED22070B21008251FF /* DARPA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DARPA.cpp; sourceTree = "<group>"; };
+		C31AB6EF22070CFB008251FF /* arctic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = arctic.cpp; sourceTree = "<group>"; };
+		C31AB6F122070D44008251FF /* canadaTrip.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = canadaTrip.cpp; sourceTree = "<group>"; };
+		C31AB6F322070D6D008251FF /* withdrawal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = withdrawal.cpp; sourceTree = "<group>"; };
 		C34C59332203DF6B007ACDAF /* cutRod.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cutRod.cpp; sourceTree = "<group>"; };
 		C34C593522040601007ACDAF /* recurringDecimal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = recurringDecimal.cpp; sourceTree = "<group>"; };
 		C34C59382204150B007ACDAF /* boggle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = boggle.cpp; sourceTree = "<group>"; };
@@ -175,6 +207,8 @@
 		C31130992201A0FA00F14DCA /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				C31AB6E822070AC3008251FF /* optByDecision */,
+				C31AB6D82206C9E2008251FF /* greedyMethod */,
 				C31130B22201A14B00F14DCA /* helper.cpp */,
 				C31130A82201A14A00F14DCA /* main.cpp */,
 				C34C593E22042275007ACDAF /* template.cpp */,
@@ -189,7 +223,7 @@
 				C31130AA2201A14A00F14DCA /* matrix */,
 				C31130AE2201A14B00F14DCA /* memory */,
 				C31130E02201A14B00F14DCA /* misc */,
-				C31130C22201A14B00F14DCA /* numeric */,
+				C31130C22201A14B00F14DCA /* numericalAnalysis */,
 				C31130CA2201A14B00F14DCA /* runtime */,
 			);
 			path = Algorithm;
@@ -202,6 +236,7 @@
 				C34C594D22047F42007ACDAF /* quadTree.cpp */,
 				C31130A52201A14A00F14DCA /* CMakeLists.txt */,
 				C31130A72201A14A00F14DCA /* geometry.hpp */,
+				C30A43EE2207C3C800550CBD /* fossil.cpp */,
 			);
 			path = geometry;
 			sourceTree = "<group>";
@@ -247,14 +282,15 @@
 			path = dataStructure;
 			sourceTree = "<group>";
 		};
-		C31130C22201A14B00F14DCA /* numeric */ = {
+		C31130C22201A14B00F14DCA /* numericalAnalysis */ = {
 			isa = PBXGroup;
 			children = (
 				C31130C32201A14B00F14DCA /* CMakeLists.txt */,
 				C31130C42201A14B00F14DCA /* numeric.cpp */,
 				C31130C52201A14B00F14DCA /* numeric.hpp */,
+				C30A43F02207CA1600550CBD /* simpsonMethod.cpp */,
 			);
-			path = numeric;
+			path = numericalAnalysis;
 			sourceTree = "<group>";
 		};
 		C31130C62201A14B00F14DCA /* asset */ = {
@@ -321,8 +357,38 @@
 				C31AB6CE2205B7E9008251FF /* trianglePath.cpp */,
 				C31AB6D02205C8CC008251FF /* longestIncreasingSubseq.cpp */,
 				C31AB6D42205D6BB008251FF /* tiling.cpp */,
+				C31AB6D62206807E008251FF /* snail.cpp */,
 			);
 			path = dynamicProg;
+			sourceTree = "<group>";
+		};
+		C31AB6D82206C9E2008251FF /* greedyMethod */ = {
+			isa = PBXGroup;
+			children = (
+				C31AB6D92206C9EE008251FF /* CMakeLists.txt */,
+				C31AB6DA2206CA48008251FF /* meetingRoom.cpp */,
+				C31AB6DC2206CA55008251FF /* fightOrder.cpp */,
+				C31AB6DF2206CA7B008251FF /* greedyMethod.cpp */,
+				C31AB6E02206CA7B008251FF /* greedyMethod.hpp */,
+				C31AB6E22206E245008251FF /* heatingOrder.cpp */,
+				C31AB6E42206F476008251FF /* joinString.cpp */,
+				C31AB6E62206F896008251FF /* minasTirith.cpp */,
+			);
+			path = greedyMethod;
+			sourceTree = "<group>";
+		};
+		C31AB6E822070AC3008251FF /* optByDecision */ = {
+			isa = PBXGroup;
+			children = (
+				C31AB6EC22070AEE008251FF /* CMakeLists.txt */,
+				C31AB6E922070AE7008251FF /* optByDecision.cpp */,
+				C31AB6EA22070AE7008251FF /* optByDecision.hpp */,
+				C31AB6F322070D6D008251FF /* withdrawal.cpp */,
+				C31AB6ED22070B21008251FF /* DARPA.cpp */,
+				C31AB6EF22070CFB008251FF /* arctic.cpp */,
+				C31AB6F122070D44008251FF /* canadaTrip.cpp */,
+			);
+			path = optByDecision;
 			sourceTree = "<group>";
 		};
 		C3F7E1172202A3A6002DB645 /* combinatorics */ = {
@@ -392,28 +458,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				C31130F02201A14B00F14DCA /* numeric.cpp in Sources */,
+				C31AB6D72206807E008251FF /* snail.cpp in Sources */,
 				C31130E82201A14B00F14DCA /* memory.cpp in Sources */,
 				C31130F42201A14B00F14DCA /* setcover.cpp in Sources */,
 				C34C594122043669007ACDAF /* tsp.cpp in Sources */,
 				C34C593F22042275007ACDAF /* template.cpp in Sources */,
 				C31130F22201A14B00F14DCA /* binomial.cpp in Sources */,
 				C3F7E11A2202A3D9002DB645 /* combinatorics.cpp in Sources */,
+				C31AB6F222070D44008251FF /* canadaTrip.cpp in Sources */,
 				C31AB6CD220598B4008251FF /* jumpGame.cpp in Sources */,
 				C31130E72201A14B00F14DCA /* matrix.cpp in Sources */,
 				C31130FB2201A14B00F14DCA /* misc.cpp in Sources */,
+				C31AB6F022070CFB008251FF /* arctic.cpp in Sources */,
 				C31130EC2201A14B00F14DCA /* rshash.cpp in Sources */,
 				C31130F92201A14B00F14DCA /* runtime.cpp in Sources */,
 				C31AB6CF2205B7E9008251FF /* trianglePath.cpp in Sources */,
 				C34C593722040601007ACDAF /* recurringDecimal.cpp in Sources */,
+				C30A43EF2207C3C800550CBD /* fossil.cpp in Sources */,
 				C34C594C22046F33007ACDAF /* multiply.cpp in Sources */,
 				C31130F82201A14B00F14DCA /* fence.cpp in Sources */,
 				C3F7E11E22032129002DB645 /* maxsum.cpp in Sources */,
+				C31AB6E12206CA7B008251FF /* greedyMethod.cpp in Sources */,
 				C34C593D2204210D007ACDAF /* boardCover.cpp in Sources */,
 				C34C594E22047F42007ACDAF /* quadTree.cpp in Sources */,
+				C30A43F12207CA1600550CBD /* simpsonMethod.cpp in Sources */,
 				C31130ED2201A14B00F14DCA /* tree.cpp in Sources */,
 				C31130F52201A14B00F14DCA /* dynamicProg.cpp in Sources */,
 				C34C594422045A6D007ACDAF /* tspDp.cpp in Sources */,
 				C3F7E116220282AD002DB645 /* movingAverage.cpp in Sources */,
+				C31AB6DE2206CA55008251FF /* fightOrder.cpp in Sources */,
+				C31AB6EB22070AE7008251FF /* optByDecision.cpp in Sources */,
 				C31AB6C6220570E1008251FF /* fanMeeting.cpp in Sources */,
 				C31130F62201A14B00F14DCA /* sorting.cpp in Sources */,
 				C31130EE2201A14B00F14DCA /* hash.cpp in Sources */,
@@ -424,15 +498,21 @@
 				C34C594A22046692007ACDAF /* sum.cpp in Sources */,
 				C31130EF2201A14B00F14DCA /* kdtree.cpp in Sources */,
 				C31130EA2201A14B00F14DCA /* nrkdtree.cpp in Sources */,
+				C31AB6E52206F476008251FF /* joinString.cpp in Sources */,
 				C31130EB2201A14B00F14DCA /* graph.cpp in Sources */,
+				C31AB6EE22070B21008251FF /* DARPA.cpp in Sources */,
 				C34C594722045FBD007ACDAF /* clockSync.cpp in Sources */,
 				C31130E52201A14B00F14DCA /* geometry.cpp in Sources */,
 				C31130F72201A14B00F14DCA /* sa.cpp in Sources */,
+				C31AB6DB2206CA48008251FF /* meetingRoom.cpp in Sources */,
+				C31AB6F422070D6D008251FF /* withdrawal.cpp in Sources */,
 				C31130F12201A14B00F14DCA /* simplex2.cpp in Sources */,
 				C31130E62201A14B00F14DCA /* main.cpp in Sources */,
+				C31AB6E32206E245008251FF /* heatingOrder.cpp in Sources */,
 				C31130F32201A14B00F14DCA /* simplex.cpp in Sources */,
 				C31AB6D12205C8CC008251FF /* longestIncreasingSubseq.cpp in Sources */,
 				C34C59392204150B007ACDAF /* boggle.cpp in Sources */,
+				C31AB6E72206F896008251FF /* minasTirith.cpp in Sources */,
 				C31130E92201A14B00F14DCA /* helper.cpp in Sources */,
 				C3F7E1132201BFF4002DB645 /* saEasom.cpp in Sources */,
 			);

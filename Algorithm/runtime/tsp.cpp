@@ -68,9 +68,9 @@ protected:
     }
 
     // Brute force TSP
-    // path: City visit history in order.
-    // visited: Visitation flags of the cities. Duplicated info but makes coding easier.
     // length: Path length up to now.
+    // _path: City visit history in order.
+    // _visited: Visitation flags of the cities. Duplicated info but makes coding easier.
     //
     double shortestPath(double length) {
         if (_logOn) {

@@ -17,17 +17,6 @@
 #include <cmath>
 
 //
-// STL VECTORS
-//
-
-typedef std::vector<bool> VB;
-typedef std::vector<int> VI;
-typedef std::vector<double> VD;
-typedef std::vector<std::vector<bool>> VVB;
-typedef std::vector<std::vector<int>> VVI;
-typedef std::vector<std::vector<double>> VVD;
-
-//
 //
 //
 
@@ -47,6 +36,10 @@ struct Point {
         return x == other.x && y == other.y;
     }
 };
+
+typedef Point<double> PD;
+typedef Point<int> PI;
+
 
 // Do not confused with coordinate system.
 // Here x grows as we move to right and y to up.
@@ -107,7 +100,7 @@ public:
 
 // Make my own PI instead of using cmath's M_PI.
 //const double PI = 2.0 * acos(0);
-const double PI = 4.0 * acos(1);
+const double MY_PI = 4.0 * acos(1);
 
 struct vector2 {
     double x, y;
@@ -150,7 +143,7 @@ struct vector2 {
     double polar() const {
         // Note atan2(y, x) -> [-PI..PI).
         // Make result between [0..2PI) instaed of [-PI..PI).
-        return fmod(atan2(y, x) + 2 * PI, 2 * PI);
+        return fmod(atan2(y, x) + 2 * MY_PI, 2 * MY_PI);
     }
     
     // Inner product = |a||b|cos(theta)
@@ -171,7 +164,7 @@ struct vector2 {
         vector2 r = other.normalize();
         return r * r.inner(*this);
     }
-    // Find the nearest point from me between A and B. Return the nearest one in vector2 form.
+    // Find the nearest point from me among A and B. Return the nearest one in vector2 form.
     // TODO:1-30-2019: sqrt() will be involoved. Complexity of sqrt()?
     //       Isn't it possible just using + or - instead of sqrt()?
     //       Let's find out sqrt() algorithm. -->
@@ -205,6 +198,20 @@ struct vector2 {
         return (a - *this).outer(b - *this);
     }
 };
+
+
+//
+// STL VECTORS
+//
+
+typedef std::vector<bool> VB;
+typedef std::vector<int> VI;
+typedef std::vector<double> VD;
+typedef std::vector<std::vector<bool>> VVB;
+typedef std::vector<std::vector<int>> VVI;
+typedef std::vector<std::vector<double>> VVD;
+typedef std::vector<Point<double>> VPD;
+typedef std::vector<Point<int>> VPI;
 
 
 //
