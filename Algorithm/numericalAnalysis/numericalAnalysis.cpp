@@ -1,5 +1,5 @@
 //
-//  numeric.cpp
+//  numericalAnalysis.cpp
 //  Algorithm
 //
 //  Created by Choong-il Ryu on 22/01/2019.
@@ -7,7 +7,7 @@
 //
 
 #include "helper.hpp"
-#include "numeric.hpp"
+#include "numericalAnalysis.hpp"
 #include <iostream>
 #include <cmath>
 #include <limits>

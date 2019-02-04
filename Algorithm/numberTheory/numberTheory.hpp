@@ -1,10 +1,13 @@
 //
-//  simpsonMethod.cpp
+//  numberTheory.hpp
 //  Algorithm
 //
 //  Created by Choong-il Ryu on 04/02/2019.
 //  Copyright © 2019 codetolearn.kr. All rights reserved.
 //
 
-#include "helper.hpp"
-#include "numericalAnalysis.hpp"
+#ifndef numberTheory_hpp
+#define numberTheory_hpp
+
+void testEratosthenes();
+#endif /* numberTheory_hpp */

@@ -31,8 +31,13 @@ void Graph::clearLabel() {
 }
 
 // Add an edge
-void Graph::connect(int me, int to) {
-    _adj[me].push_back(to);
+void Graph::connect(int here, int there) {
+    _adj[here].push_back(there);
+}
+
+// Add an weighted edge
+void Graph::connect(int here, int there, int weight) {
+    _adj[here].push_back(there);
 }
 
 // Print the graph

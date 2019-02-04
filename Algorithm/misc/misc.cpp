@@ -52,49 +52,6 @@ void testMax() {
     std::cout << "std::numeric_limits<double>::max() = " << std::numeric_limits<double>::max() << std::endl;
 }
 
-
-
-// Pick r out of n
-// O(n^r)
-void pick_r_out_of_n(int r, int n) {
-    // r is ignored. Will pick 4 out of n.
-    for (int i = 0; i < n; i++)
-        for (int j = i + 1; j < n; j++)
-            for (int k = j + 1; k < n; k++)
-                for (int l = k + 1; l < n; l++)
-                    std::cout << i << " " << j << " " << k << " " << l << std::endl;
-}
-
-
-// Pick r out of n using bitmask
-// Reference: https://stackoverflow.com/questions/12991758/creating-all-possible-k-combinations-of-n-items-in-c
-//
-void bm_pick_r_out_of_n(int r, int n)
-{
-    std::string bitmask(r, 1); // K leading 1's
-    bitmask.resize(n, 0); // N-K trailing 0's
-    
-    // print integers and permute bitmask
-    do {
-        for (int i = 0; i < n; ++i) // [0..N-1] integers
-        {
-            if (bitmask[i]) std::cout << " " << i;
-        }
-        std::cout << std::endl;
-    } while (std::prev_permutation(bitmask.begin(), bitmask.end()));
-}
-
-void testCombination() {
-    startTimer();
-    pick_r_out_of_n(4, 7);
-    stopTimer();
-    
-    
-    startTimer();
-    bm_pick_r_out_of_n(7, 4);
-    stopTimer();
-}
-
 // Prime Factorization 1
 // Reference: [1] pp.105
 // Complexity: Loop [2,n]. O(n).

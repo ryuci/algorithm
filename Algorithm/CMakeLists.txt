@@ -15,7 +15,11 @@
 ##  Best cmake tutorial ever!
 ##     
 cmake_minimum_required(VERSION 3.0)
+
 set(CMAKE_CXX_STANDARD 14)
+#set(CMAKE_C_COMPILER /Library/Developer/CommandLineTools/usr/bin/gcc)
+#set(CMAKE_CXX_COMPILER /Library/Developer/CommandLineTools/usr/bin/gcc)
+
 project(Algorithm)
 
 set(SRC_FILES main.cpp helper.cpp)
@@ -66,6 +70,7 @@ add_subdirectory(matrix)
 add_subdirectory(memory)
 add_subdirectory(misc)
 add_subdirectory(numericalAnalysis)
+add_subdirectory(numberTheory)
 #add_subdirectory(opencv)
 add_subdirectory(optByDecision)
 add_subdirectory(runtime)
@@ -86,7 +91,8 @@ target_link_libraries(algorithm
     matrix 
     memory 
     misc 
-    numeric 
+    numericalAnalysis
+    numberTheory
 #    opencv
     optByDecision
     runtime

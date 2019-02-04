@@ -1,13 +1,13 @@
 //
-//  numeric.hpp
+//  numericalAnalysis.hpp
 //  Algorithm
 //
 //  Created by Choong-il Ryu on 22/01/2019.
 //  Copyright © 2019 codetolearn.kr. All rights reserved.
 //
 
-#ifndef numeric_hpp
-#define numeric_hpp
+#ifndef numericalAnalysis_hpp
+#define numericalAnalysis_hpp
 
 void testFloatingPointPrecision();
 void testBisect();
@@ -16,4 +16,4 @@ void testPrecision();
 
 
 
-#endif /* numeric_hpp */
+#endif /* numericalAnalysis_hpp */

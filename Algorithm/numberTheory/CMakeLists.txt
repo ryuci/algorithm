@@ -1,7 +1,7 @@
-set(SRC_FILES
-    numericalAnalysis.cpp
-    simpsonMethod.cpp
+set(SRC_FILES 
+    numberTheory.cpp
+    sieveOfEratosthenes.cpp
 )
 # Creates a new library target built from sources.
 # add_library(target [STATIC | SHARED | MODULE] sources…)
-add_library(numericalAnalysis ${SRC_FILES})
+add_library(numberTheory ${SRC_FILES})

@@ -20,7 +20,7 @@
 		C31130ED2201A14B00F14DCA /* tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130BA2201A14B00F14DCA /* tree.cpp */; };
 		C31130EE2201A14B00F14DCA /* hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130BF2201A14B00F14DCA /* hash.cpp */; };
 		C31130EF2201A14B00F14DCA /* kdtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130C12201A14B00F14DCA /* kdtree.cpp */; };
-		C31130F02201A14B00F14DCA /* numeric.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130C42201A14B00F14DCA /* numeric.cpp */; };
+		C31130F02201A14B00F14DCA /* numericalAnalysis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130C42201A14B00F14DCA /* numericalAnalysis.cpp */; };
 		C31130F12201A14B00F14DCA /* simplex2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130CB2201A14B00F14DCA /* simplex2.cpp */; };
 		C31130F22201A14B00F14DCA /* binomial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130CC2201A14B00F14DCA /* binomial.cpp */; };
 		C31130F32201A14B00F14DCA /* simplex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31130CF2201A14B00F14DCA /* simplex.cpp */; };
@@ -61,6 +61,8 @@
 		C34C594A22046692007ACDAF /* sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C594922046692007ACDAF /* sum.cpp */; };
 		C34C594C22046F33007ACDAF /* multiply.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C594B22046F33007ACDAF /* multiply.cpp */; };
 		C34C594E22047F42007ACDAF /* quadTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C594D22047F42007ACDAF /* quadTree.cpp */; };
+		C3F167142207D41100B61B17 /* numberTheory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F167122207D41100B61B17 /* numberTheory.cpp */; };
+		C3F167162207D43400B61B17 /* sieveOfEratosthenes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F167152207D43400B61B17 /* sieveOfEratosthenes.cpp */; };
 		C3F7E1132201BFF4002DB645 /* saEasom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F7E1112201BFF4002DB645 /* saEasom.cpp */; };
 		C3F7E116220282AD002DB645 /* movingAverage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F7E114220282AD002DB645 /* movingAverage.cpp */; };
 		C3F7E11A2202A3D9002DB645 /* combinatorics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F7E1182202A3D9002DB645 /* combinatorics.cpp */; };
@@ -111,8 +113,8 @@
 		C31130C02201A14B00F14DCA /* nrkdtree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = nrkdtree.hpp; sourceTree = "<group>"; };
 		C31130C12201A14B00F14DCA /* kdtree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = kdtree.cpp; sourceTree = "<group>"; };
 		C31130C32201A14B00F14DCA /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
-		C31130C42201A14B00F14DCA /* numeric.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = numeric.cpp; sourceTree = "<group>"; };
-		C31130C52201A14B00F14DCA /* numeric.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = numeric.hpp; sourceTree = "<group>"; };
+		C31130C42201A14B00F14DCA /* numericalAnalysis.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = numericalAnalysis.cpp; sourceTree = "<group>"; };
+		C31130C52201A14B00F14DCA /* numericalAnalysis.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = numericalAnalysis.hpp; sourceTree = "<group>"; };
 		C31130C72201A14B00F14DCA /* codingboy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = codingboy.jpg; sourceTree = "<group>"; };
 		C31130C82201A14B00F14DCA /* usca312_dist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = usca312_dist.txt; sourceTree = "<group>"; };
 		C31130C92201A14B00F14DCA /* ha30_dist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ha30_dist.txt; sourceTree = "<group>"; };
@@ -168,6 +170,10 @@
 		C34C594922046692007ACDAF /* sum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sum.cpp; sourceTree = "<group>"; };
 		C34C594B22046F33007ACDAF /* multiply.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = multiply.cpp; sourceTree = "<group>"; };
 		C34C594D22047F42007ACDAF /* quadTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quadTree.cpp; sourceTree = "<group>"; };
+		C3F167122207D41100B61B17 /* numberTheory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = numberTheory.cpp; sourceTree = "<group>"; };
+		C3F167132207D41100B61B17 /* numberTheory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = numberTheory.hpp; sourceTree = "<group>"; };
+		C3F167152207D43400B61B17 /* sieveOfEratosthenes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sieveOfEratosthenes.cpp; sourceTree = "<group>"; };
+		C3F167172208046B00B61B17 /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		C3F7E1112201BFF4002DB645 /* saEasom.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = saEasom.cpp; sourceTree = "<group>"; };
 		C3F7E114220282AD002DB645 /* movingAverage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = movingAverage.cpp; sourceTree = "<group>"; };
 		C3F7E1182202A3D9002DB645 /* combinatorics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = combinatorics.cpp; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 		C31130992201A0FA00F14DCA /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				C3F167112207D3D800B61B17 /* numberTheory */,
 				C31AB6E822070AC3008251FF /* optByDecision */,
 				C31AB6D82206C9E2008251FF /* greedyMethod */,
 				C31130B22201A14B00F14DCA /* helper.cpp */,
@@ -232,11 +239,11 @@
 		C31130A22201A14A00F14DCA /* geometry */ = {
 			isa = PBXGroup;
 			children = (
-				C31130A42201A14A00F14DCA /* geometry.cpp */,
-				C34C594D22047F42007ACDAF /* quadTree.cpp */,
 				C31130A52201A14A00F14DCA /* CMakeLists.txt */,
-				C31130A72201A14A00F14DCA /* geometry.hpp */,
 				C30A43EE2207C3C800550CBD /* fossil.cpp */,
+				C31130A42201A14A00F14DCA /* geometry.cpp */,
+				C31130A72201A14A00F14DCA /* geometry.hpp */,
+				C34C594D22047F42007ACDAF /* quadTree.cpp */,
 			);
 			path = geometry;
 			sourceTree = "<group>";
@@ -286,8 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				C31130C32201A14B00F14DCA /* CMakeLists.txt */,
-				C31130C42201A14B00F14DCA /* numeric.cpp */,
-				C31130C52201A14B00F14DCA /* numeric.hpp */,
+				C31130C42201A14B00F14DCA /* numericalAnalysis.cpp */,
+				C31130C52201A14B00F14DCA /* numericalAnalysis.hpp */,
 				C30A43F02207CA1600550CBD /* simpsonMethod.cpp */,
 			);
 			path = numericalAnalysis;
@@ -391,6 +398,17 @@
 			path = optByDecision;
 			sourceTree = "<group>";
 		};
+		C3F167112207D3D800B61B17 /* numberTheory */ = {
+			isa = PBXGroup;
+			children = (
+				C3F167172208046B00B61B17 /* CMakeLists.txt */,
+				C3F167122207D41100B61B17 /* numberTheory.cpp */,
+				C3F167132207D41100B61B17 /* numberTheory.hpp */,
+				C3F167152207D43400B61B17 /* sieveOfEratosthenes.cpp */,
+			);
+			path = numberTheory;
+			sourceTree = "<group>";
+		};
 		C3F7E1172202A3A6002DB645 /* combinatorics */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,7 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31130F02201A14B00F14DCA /* numeric.cpp in Sources */,
+				C31130F02201A14B00F14DCA /* numericalAnalysis.cpp in Sources */,
 				C31AB6D72206807E008251FF /* snail.cpp in Sources */,
 				C31130E82201A14B00F14DCA /* memory.cpp in Sources */,
 				C31130F42201A14B00F14DCA /* setcover.cpp in Sources */,
@@ -490,6 +508,7 @@
 				C31AB6EB22070AE7008251FF /* optByDecision.cpp in Sources */,
 				C31AB6C6220570E1008251FF /* fanMeeting.cpp in Sources */,
 				C31130F62201A14B00F14DCA /* sorting.cpp in Sources */,
+				C3F167142207D41100B61B17 /* numberTheory.cpp in Sources */,
 				C31130EE2201A14B00F14DCA /* hash.cpp in Sources */,
 				C31AB6D52205D6BB008251FF /* tiling.cpp in Sources */,
 				C34C593B220420FA007ACDAF /* picnic.cpp in Sources */,
@@ -510,6 +529,7 @@
 				C31130E62201A14B00F14DCA /* main.cpp in Sources */,
 				C31AB6E32206E245008251FF /* heatingOrder.cpp in Sources */,
 				C31130F32201A14B00F14DCA /* simplex.cpp in Sources */,
+				C3F167162207D43400B61B17 /* sieveOfEratosthenes.cpp in Sources */,
 				C31AB6D12205C8CC008251FF /* longestIncreasingSubseq.cpp in Sources */,
 				C34C59392204150B007ACDAF /* boggle.cpp in Sources */,
 				C31AB6E72206F896008251FF /* minasTirith.cpp in Sources */,
@@ -637,6 +657,7 @@
 			buildSettings = {
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					/Users/ryuci/boost_1_69_0,
 					/Users/ryuci/Dropbox/workspace/cpp/boost_1_69_0,
@@ -654,6 +675,7 @@
 			buildSettings = {
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_VERSION = "";
 				HEADER_SEARCH_PATHS = (
 					/Users/ryuci/boost_1_69_0,
 					/Users/ryuci/Dropbox/workspace/cpp/boost_1_69_0,

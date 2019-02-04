@@ -28,9 +28,10 @@ static void showDynamicProgMenu();
 static void showGeometryMenu();
 static void showGreedyMethodMenu();
 static void showOptByDecisionMenu();
+static void showNumberTheoryMenu();
 static void showNumericMenu();
 static void showMatrixMenu();
-#ifdef INCLUDE_OPENTV
+#ifdef INCLUDE_OPENCV
 static void showOpencvMenu();
 #endif
 #ifdef INCLUDE_VTK
@@ -41,7 +42,7 @@ static void showMiscMenu();
 #define AUTOMENU
 #ifdef AUTOMENU
 // Key inputs to go to the wanted menu. Append -1 twice if you want to exit after execution.
-std::queue<int> autoInput = std::queue<int>({6, 0, -1, -1});
+std::queue<int> autoInput = std::queue<int>({8, 1, -1, -1});
 #else
 std::queue<int> autoInput;
 #endif
@@ -54,8 +55,9 @@ static std::vector<std::pair<std::string,void (*)()>> mainMenu = {
     {"Dynamic Programming", showDynamicProgMenu},
     {"Greedy Method", showGreedyMethodMenu},
     {"Opt by Decision", showOptByDecisionMenu},
+    {"Number Theory", showNumberTheoryMenu},
     {"Geometry", showGeometryMenu},
-    {"Numeric", showNumericMenu},
+    {"Numerical Analysis", showNumericMenu},
     {"Matrix", showMatrixMenu},
     {"Misc.", showMiscMenu},
 #ifdef INCLUDE_OPENTV
@@ -136,6 +138,13 @@ static std::vector<std::pair<std::string,void (*)()>> memoryMenu = {
     {"Quad Tree Reverse", testQuadTreeReverse},
 };
 
+static std::vector<std::pair<std::string,void (*)()>> numberTheoryMenu = {
+    {"Prime Factorization", testPrimeFactor},
+    {"Find Prime - Eratosthenes's Sieve", testEratosthenes},
+};
+
+
+
 static std::vector<std::pair<std::string,void (*)()>> combinatoricsMenu = {
     {"Pick List from n!", testPickList_n_factorial},
     {"Pick List from nPr", testPickList_nPr},
@@ -165,6 +174,9 @@ static std::vector<std::pair<std::string,void (*)()>> optByDecisionMenu = {
 
 static std::vector<std::pair<std::string,void (*)()>> geometryMenu = {
     {"Rectangle Overlap", testRectOverlap},
+    {"Line Intersection", testIntersection},
+
+    
     {"Quad Tree Neighbor Search", testQuadTreeNeighborSearch},
 };
 
@@ -209,10 +221,7 @@ static std::vector<std::pair<std::string,void (*)()>> miscMenu = {
     {"Random Number Test", testRandom},
     {"Random Shuffle Test", testRandomShuffle},
     {"Max Numbers", testMax},
-    {"Combination", testCombination},
     {"Recurring Decimal - Pigeonhole Priciple", testRecurringDecimal},
-    {"Prime Factorization", testPrimeFactor},
-    {"Prime Test - Eratosthenes's Sieve", testIsPrime},
 };
 
 
@@ -250,8 +259,14 @@ static void showOptByDecisionMenu() {
     
 }
 
+
+static void showNumberTheoryMenu() {
+    displayMenu(numberTheoryMenu, "Number Theory");
+    
+}
+
 static void showNumericMenu() {
-    displayMenu(numericMenu, "Numeric");
+    displayMenu(numericMenu, "Numerical Analysis");
 }
 
 #ifdef INCLUDE_OPENCV

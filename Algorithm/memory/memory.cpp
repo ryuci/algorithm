@@ -9,7 +9,4 @@
 #include "helper.hpp"
 #include "memory.hpp"
 
-void testEratosthenes() {
-    
-}
 

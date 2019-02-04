@@ -9,7 +9,6 @@
 #ifndef memory_hpp
 #define memory_hpp
 
-void testEratosthenes();
 void testQuadTreeReverse();
 void testQuadTreeNeighborSearch();
 

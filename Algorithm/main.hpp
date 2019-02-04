@@ -18,7 +18,8 @@
 #include "matrix/matrix.hpp"
 #include "memory/memory.hpp"
 #include "misc/misc.hpp"
-#include "numericalAnalysis/numeric.hpp"
+#include "numberTheory/numberTheory.hpp"
+#include "numericalAnalysis/numericalAnalysis.hpp"
 #include "optByDecision/optByDecision.hpp"
 #ifdef INCLUDE_OPENCV
 #include "opencv/opencvbridge.hpp"

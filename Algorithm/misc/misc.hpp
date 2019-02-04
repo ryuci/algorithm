@@ -25,7 +25,6 @@ int boardCover(std::vector<std::vector<int>>& board);
 void testRandom();
 void testRandomShuffle();
 
-void testCombination();
 void testPrimeFactor();
 void testIsPrime();
 

@@ -9,12 +9,13 @@
 #ifndef graph_hpp
 #define graph_hpp
 
-#include <iostream>
+#include "helper.hpp"
 
 class Graph {
 private:
     // Adjacency List. Size of vector<> = _size = # of vertices.
     std::vector<std::vector<int>> _adj;
+    //std::vector<std::vector<std::pair<int, int>>> _adj;
     // Info stored in vertices. Size of vector = _size = # of vertices.
     std::vector<bool> _visited;
     // Another version of _visited. Record visit order.
@@ -34,7 +35,8 @@ public:
     Graph(int size);
     void clearVisit();
     void clearLabel();
-    void connect(int me, int to);
+    void connect(int here, int there);
+    void connect(int here, int there, int weight);
     void print(bool infoToo);
     void printOrder();
     void dfs(int here, std::function<void(int)> callback);
