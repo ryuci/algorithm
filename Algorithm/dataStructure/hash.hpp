@@ -84,12 +84,10 @@ protected:
             }
             else if (_arr[index].key == _EMPTY) {
                 // End of search.
-                // TODO:1-26-2019: I need to return invalid value here.
-                //                 I don't want to use reference argument to get value and
-                //                 pass/fail status at the same time.
-                //                 Want to use optional. Shall I change compiler to C++17?
-                //                 When <V> == <int>, V() == 0. Could cause problem in caller's side if 0 is meaningful.
-                //                 WARNING!!!WARNING!!!WARNING!!!
+                // TODO:1-26-2019: WARNING!!!WARNING!!!WARNING!!!
+                //      When <V> == <int>, V() == 0.
+                //      Could cause problem in caller's side if 0 is meaningful.
+                //
                 return V();
             }
             std::cout << "Collision in getter!\n";
@@ -131,6 +129,8 @@ protected:
     bool remove_double_hashing(int key) { return false; };
 
 public:
+    // Constructor
+    //
     HashMap(int capacity = 163, std::string mode="linear probing") {
         _capacity = capacity;
         _arr.assign(_capacity, HashNode<V>{_EMPTY, 0});

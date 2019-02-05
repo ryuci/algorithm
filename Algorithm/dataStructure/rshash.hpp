@@ -20,18 +20,14 @@
 template <typename V>
 class RsHashMap : public HashMap<V> {
 protected:
-    //std::deque<HashNode<V>> _arr;
-    //int _capacity;
     int _size;
-    //static const int _EMPTY = -1;
-    //static const int _DELETED = -2;
     
     //inline int hashCode(int key) { return key % _capacity; }
     void resize() {
         // Make bigger hash map.
         RsHashMap<V> newHm(HashMap<V>::_capacity * 2);
         // Move (K,V) from old to new hash map.
-        // Note that K % _capacityOld <> K % _capacityNew is not necessarily same.
+        // Note that K % _capacityOld and K % _capacityNew are not necessarily same.
         for (int i = 0; i < HashMap<V>::_capacity; i++) {
             if (HashMap<V>::_arr[i].key != HashMap<V>::_DELETED &&
                 HashMap<V>::_arr[i].key != HashMap<V>::_EMPTY)

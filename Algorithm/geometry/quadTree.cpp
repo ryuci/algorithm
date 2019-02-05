@@ -128,6 +128,8 @@ public:
             // Capacity is full. Need to try subareas.
             if (_logOn) std::cout << _label << " Full\n";
             if (!_divided) {
+                // TODO:2-2-2019: Under Development - Should write a code to move existing points to subareas.
+                //
                 // Make sub-quadtree.
                 if (_logOn) std::cout << "Divide\n";
                 // Divide the area.
