@@ -21,10 +21,10 @@
 //
 // TYPO-PRONE NUMBERS
 //
-#define MILLION  1000000
-#define BILLION  1000000000
-#define TRILLION 1000000000000
-
+#define MILLION  (1000*1000)
+#define BILLION  (1000*MILLION)
+#define TRILLION (1000*BILLION)
+#define QUADRILLION (1000*TRILLION)
 
 //
 //
@@ -115,13 +115,16 @@ public:
 
 typedef std::vector<bool> VB;
 typedef std::vector<int> VI;
+typedef std::vector<long> VL;
 typedef std::vector<double> VD;
 typedef std::vector<std::string> VS;
 typedef std::vector<std::vector<bool>> VVB;
 typedef std::vector<std::vector<int>> VVI;
+typedef std::vector<std::vector<long>> VVL;
 typedef std::vector<std::vector<double>> VVD;
-typedef std::vector<Point<double>> VPD;
 typedef std::vector<Point<int>> VPI;
+typedef std::vector<Point<long>> VPL;
+typedef std::vector<Point<double>> VPD;
 
 
 //

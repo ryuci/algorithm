@@ -62,6 +62,7 @@
 		C34C594A22046692007ACDAF /* sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C594922046692007ACDAF /* sum.cpp */; };
 		C34C594C22046F33007ACDAF /* multiply.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C594B22046F33007ACDAF /* multiply.cpp */; };
 		C34C594E22047F42007ACDAF /* quadTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C594D22047F42007ACDAF /* quadTree.cpp */; };
+		C3C331BB220967FE005A1187 /* numb3rs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3C331BA220967FE005A1187 /* numb3rs.cpp */; };
 		C3F167142207D41100B61B17 /* numberTheory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F167122207D41100B61B17 /* numberTheory.cpp */; };
 		C3F167162207D43400B61B17 /* sieveOfEratosthenes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F167152207D43400B61B17 /* sieveOfEratosthenes.cpp */; };
 		C3F7E1132201BFF4002DB645 /* saEasom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3F7E1112201BFF4002DB645 /* saEasom.cpp */; };
@@ -159,7 +160,6 @@
 		C31AB6F122070D44008251FF /* canadaTrip.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = canadaTrip.cpp; sourceTree = "<group>"; };
 		C31AB6F322070D6D008251FF /* withdrawal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = withdrawal.cpp; sourceTree = "<group>"; };
 		C31C8645220940D3005E84FD /* polyomino.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = polyomino.cpp; sourceTree = "<group>"; };
-		C31C864722094228005E84FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C34C59332203DF6B007ACDAF /* cutRod.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cutRod.cpp; sourceTree = "<group>"; };
 		C34C593522040601007ACDAF /* recurringDecimal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = recurringDecimal.cpp; sourceTree = "<group>"; };
 		C34C59382204150B007ACDAF /* boggle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = boggle.cpp; sourceTree = "<group>"; };
@@ -173,6 +173,7 @@
 		C34C594922046692007ACDAF /* sum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sum.cpp; sourceTree = "<group>"; };
 		C34C594B22046F33007ACDAF /* multiply.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = multiply.cpp; sourceTree = "<group>"; };
 		C34C594D22047F42007ACDAF /* quadTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quadTree.cpp; sourceTree = "<group>"; };
+		C3C331BA220967FE005A1187 /* numb3rs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = numb3rs.cpp; sourceTree = "<group>"; };
 		C3F167122207D41100B61B17 /* numberTheory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = numberTheory.cpp; sourceTree = "<group>"; };
 		C3F167132207D41100B61B17 /* numberTheory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = numberTheory.hpp; sourceTree = "<group>"; };
 		C3F167152207D43400B61B17 /* sieveOfEratosthenes.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sieveOfEratosthenes.cpp; sourceTree = "<group>"; };
@@ -235,7 +236,6 @@
 				C31130E02201A14B00F14DCA /* misc */,
 				C31130C22201A14B00F14DCA /* numericalAnalysis */,
 				C31130CA2201A14B00F14DCA /* runtime */,
-				C31C864722094228005E84FD /* README.md */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -370,6 +370,7 @@
 				C31AB6D42205D6BB008251FF /* tiling.cpp */,
 				C31AB6D62206807E008251FF /* snail.cpp */,
 				C31C8645220940D3005E84FD /* polyomino.cpp */,
+				C3C331BA220967FE005A1187 /* numb3rs.cpp */,
 			);
 			path = dynamicProg;
 			sourceTree = "<group>";
@@ -498,6 +499,7 @@
 				C31130F92201A14B00F14DCA /* runtime.cpp in Sources */,
 				C31AB6CF2205B7E9008251FF /* trianglePath.cpp in Sources */,
 				C34C593722040601007ACDAF /* recurringDecimal.cpp in Sources */,
+				C3C331BB220967FE005A1187 /* numb3rs.cpp in Sources */,
 				C30A43EF2207C3C800550CBD /* fossil.cpp in Sources */,
 				C34C594C22046F33007ACDAF /* multiply.cpp in Sources */,
 				C31130F82201A14B00F14DCA /* fence.cpp in Sources */,

@@ -11,7 +11,7 @@
 
 VB isPrime;
 
-static bool eratosthenes(int upto) {
+static bool eratosthenes(long upto) {
     try {
         isPrime.assign(upto+1, false);
     } catch (std::length_error& e) {
@@ -19,10 +19,10 @@ static bool eratosthenes(int upto) {
         return false;
     }
     isPrime[0] = isPrime[1] = false;
-    int sqrtn = int(sqrt(upto));
-    for (int i = 2; i < sqrtn; ++i) {
+    long sqrtn = long(sqrt(upto));
+    for (long i = 2; i < sqrtn; ++i) {
         if (isPrime[i])
-            for (int j = i*i; j <= upto; j += i)
+            for (long j = i * i; j <= upto; j += i)
                 isPrime[i] = false;
     }
     return true;

@@ -15,5 +15,7 @@ void testLIS();
 void testTiling();
 void testTrianglePathCount();
 void testSnail();
+void testPolyomino();
+void testNumb3rs();
 
 #endif /* dynamicProg_hpp */

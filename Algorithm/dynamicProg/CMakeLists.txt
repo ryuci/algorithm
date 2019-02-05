@@ -2,6 +2,8 @@ set(SRC_FILES
     dynamicProg.cpp
     jumpGame.cpp
     longestIncreasingSubseq.cpp
+    numb3rs.cpp
+    polyomino.cpp
     snail.cpp
     tiling.cpp
     trianglePath.cpp
